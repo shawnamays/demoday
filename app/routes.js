@@ -36,25 +36,7 @@ module.exports = function (app, passport, db) {
       })
     })
   });
-// this code was given by void with help from a mentor named Mark
 
-
-//   app.get('/inventory', async (req, res) => {
-//     const groceryResult = await fetch("https://jsonplaceholder.typicode.com/todos/") //later on put grocery api here
-//     let groceryJson = await groceryResult.json()
-
-//     const drinkResult = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a") //later on put grocery api here
-//     let drinkJson = await drinkResult.json()
-
-//     //slice returns new array , splice mutates it
-//     console.log(groceryJson.length);
-
-//     groceryJson = groceryJson.slice(0, 10)
-//     drinkJson = drinkJson.drinks.slice(0, 3)
-//     console.log(groceryJson.length);
-//     //const result = await db.collection('cart').find().toArray() //can use this logic structure later to loop through grocery items and try to find them in the cart, then do stuff based on that
-//     res.render('inventory.ejs', { inventory: groceryJson, drink: drinkJson })
-// })
 
   // LOGOUT ==============================
   // get is the read in CRUD
@@ -80,16 +62,32 @@ module.exports = function (app, passport, db) {
     })
   })
 
-  //thumbs up and down----------------------------------------
 
-  //THIS IS THE CREATE PART OF CRUD AND THE THUMB DOWN LOGIC
-  app.put('/thumbup', (req, res) => {
-    db.collection('messages').findOneAndUpdate({
-      name: req.body.name,
-      msg: req.body.msg
+
+
+ //APOTHECARY CABINET ============
+
+
+ app.get('/apothecary', isLoggedIn, function (req, res) {
+  db.collection('users').find({
+    email: req.body.email
+
+  }).toArray((err, result) => {
+    if (err) return console.log(err)
+    res.render('apothecary.ejs', {
+      userInfo: result
+    })
+  })
+});
+
+
+  app.put('/apothecary', isLoggedIn, (req, res) => {
+    db.collection('users').findOneAndUpdate({
+      email: req.body.email
+  
     }, {
-      $set: {
-        thumbUp: req.body.thumbUp + 1,
+      $addToSet: {
+        cabinet: req.body.herb
       }
     }, {
       sort: { _id: -1 },
@@ -100,35 +98,26 @@ module.exports = function (app, passport, db) {
     })
   })
 
+  
 
-  // app.put('/thumbDown', (req, res) => {
-  //   db.collection('messages').findOneAndUpdate({
-  //     name: req.body.name,
-  //     msg: req.body.msg
-  //   }, {
-  //     $set: {
-  //       thumbDown: req.body.thumbDown + 1,
-  //     }
-  //   }, {
-  //     sort: { _id: -1 },
-  //     upsert: true
-  //   }, (err, result) => {
-  //     if (err) return res.send(err)
-  //     res.send(result)
-  //   })
-  // })
-
-  //THIS ROUTE SPECIFIES THAT WE WANT TO DELETE THE COMMENT
-
-  app.delete('/messages', (req, res) => {
-    db.collection('messages').findOneAndDelete({
-      name: req.body.name,
-      msg: req.body.msg
+  app.delete('/apothecary', isLoggedIn, (req, res) => {
+    db.collection('users').findOneAndUpdate({
+      email: req.body.email
+    }, {
+      $pull: {
+        cabinet: req.body.herb
+      }
     }, (err, result) => {
       if (err) return res.send(500, err)
       res.send('Message deleted!')
     })
   })
+
+
+
+
+
+
 
   // =============================================================================
   // AUTHENTICATE (FIRST LOGIN) ==================================================
