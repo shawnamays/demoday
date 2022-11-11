@@ -18,6 +18,12 @@ module.exports = function (app, passport, db) {
         res.redirect('/');
     });
 
+    //this is to get to the apothecary cabinet page ===============
+    app.get('/apothecary', function (req, res) {
+      res.render('apothecary.ejs');
+    });
+  
+
 
   // PROFILE SECTION =========================
   // this retrieves the profile route from the ejs file
@@ -95,22 +101,22 @@ module.exports = function (app, passport, db) {
   })
 
 
-  app.put('/thumbDown', (req, res) => {
-    db.collection('messages').findOneAndUpdate({
-      name: req.body.name,
-      msg: req.body.msg
-    }, {
-      $set: {
-        thumbDown: req.body.thumbDown + 1,
-      }
-    }, {
-      sort: { _id: -1 },
-      upsert: true
-    }, (err, result) => {
-      if (err) return res.send(err)
-      res.send(result)
-    })
-  })
+  // app.put('/thumbDown', (req, res) => {
+  //   db.collection('messages').findOneAndUpdate({
+  //     name: req.body.name,
+  //     msg: req.body.msg
+  //   }, {
+  //     $set: {
+  //       thumbDown: req.body.thumbDown + 1,
+  //     }
+  //   }, {
+  //     sort: { _id: -1 },
+  //     upsert: true
+  //   }, (err, result) => {
+  //     if (err) return res.send(err)
+  //     res.send(result)
+  //   })
+  // })
 
   //THIS ROUTE SPECIFIES THAT WE WANT TO DELETE THE COMMENT
 
