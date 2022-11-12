@@ -2,8 +2,82 @@
 // var thumbDown = document.getElementsByClassName("fa-thumbs-down");
 // var trash = document.getElementsByClassName("fa-trash-o");
 
+var favorite = document.getElementsByClassName("fa-trash-o");
+var love = document.getElementsByClassName("fa-heart-o");
 
+// favorite button is under the class "favorite"
 
+Array.from(love).forEach(function(element) {
+          element.addEventListener('click', function(){
+          
+          const herb = this.parentNode.parentNode.childNodes[1].innerText
+           
+            // FETCH REQUEST IS HERE ------------------------
+            fetch('post', {
+              //specifying which crud method we are using which is CREATE (put) in this case
+              method: 'post',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({
+                herb
+              })
+            })
+            .then(response => {
+              if (response.ok) return response.json()
+            })
+            .then(data => {
+              console.log(data)
+              //reloading the page after every thumbs up
+              window.location.reload(true)
+            })
+          });
+    });
+
+Array.from(favorite).forEach(function(element) {
+          element.addEventListener('click', function(){
+        
+          const herb = this.parentNode.parentNode.childNodes[1].innerText
+           
+            // FETCH REQUEST IS HERE ------------------------
+            fetch('favorite', {
+              //specifying which crud method we are using which is CREATE (put) in this case
+              method: 'put',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({
+                herb
+              })
+            })
+            .then(response => {
+              if (response.ok) return response.json()
+            })
+            .then(data => {
+              console.log(data)
+              //reloading the page after every thumbs up
+              window.location.reload(true)
+            })
+          });
+    });
+
+    function edit(id){
+        const herb = this.parentNode.parentNode.childNodes[1].innerText
+       
+        fetch('/update', {
+          method: 'put',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id,
+           herb
+          
+          })
+        }).then(function (response) {
+          window.location.reload()
+        })
+      
+      
+      
+      }
+      
 
 // Array.from(thumbUp).forEach(function(element) {
 //       element.addEventListener('click', function(){

@@ -1,4 +1,8 @@
+// const { ObjectID } = require("mongodb");
+
+
 module.exports = function (app, passport, db) {
+ObjectID = require('mongodb').ObjectID
 
   // normal routes ===============================================================
 
@@ -19,9 +23,7 @@ module.exports = function (app, passport, db) {
     });
 
     //this is to get to the apothecary cabinet page ===============
-    app.get('/apothecary', function (req, res) {
-      res.render('apothecary.ejs');
-    });
+
   
 
 
@@ -48,19 +50,19 @@ module.exports = function (app, passport, db) {
 
   // message board routes ===============================================================
 
-  // create part of crud 
-  app.post('/messages', (req, res) => {
-    db.collection('messages').save({
-      name: req.body.name,
-      msg: req.body.msg,
-      thumbUp: 0,
-      thumbDown: 0
-    }, (err, result) => {
-      if (err) return console.log(err)
-      console.log('saved to database')
-      res.redirect('/profile')
-    })
-  })
+  // // create part of crud 
+  // app.post('/messages', (req, res) => {
+  //   db.collection('messages').save({
+  //     name: req.body.name,
+  //     msg: req.body.msg,
+  //     thumbUp: 0,
+  //     thumbDown: 0
+  //   }, (err, result) => {
+  //     if (err) return console.log(err)
+  //     console.log('saved to database')
+  //     res.redirect('/profile')
+  //   })
+  // })
 
 
 
@@ -69,25 +71,34 @@ module.exports = function (app, passport, db) {
 
 
  app.get('/apothecary', isLoggedIn, function (req, res) {
-  db.collection('users').find({
-    email: req.body.email
-
-  }).toArray((err, result) => {
+  db.collection('myCabinet').find().toArray((err, result) => {
     if (err) return console.log(err)
     res.render('apothecary.ejs', {
-      userInfo: result
+      result: result
     })
   })
 });
 
+app.post('/post', (req, res) => {
+    db.collection('myCabinet').save({
+      herb: [req.body.herb],
+      
 
-  app.put('/apothecary', isLoggedIn, (req, res) => {
-    db.collection('users').findOneAndUpdate({
-      email: req.body.email
+    }, (err, result) => {
+      if (err) return console.log(err)
+      console.log('saved to database')
+    
+    })
+  })
+
+
+  app.put('/update', isLoggedIn, (req, res) => {
+    db.collection('myCabinet').findOneAndUpdate({
+    _id: ObjectID(id)
   
     }, {
       $addToSet: {
-        cabinet: req.body.herb
+        herb: req.body.herb
       }
     }, {
       sort: { _id: -1 },
@@ -101,7 +112,7 @@ module.exports = function (app, passport, db) {
   
 
   app.delete('/apothecary', isLoggedIn, (req, res) => {
-    db.collection('users').findOneAndUpdate({
+    db.collection('myCabinet').findOneAndUpdate({
       email: req.body.email
     }, {
       $pull: {
