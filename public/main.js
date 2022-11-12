@@ -32,34 +32,37 @@ Array.from(love).forEach(function(element) {
           });
     });
 
-Array.from(favorite).forEach(function(element) {
-          element.addEventListener('click', function(){
+// Array.from(favorite).forEach(function(element) {
+    
+//           element.addEventListener('click', function(){
+//             debugger
         
-          const herb = this.parentNode.parentNode.childNodes[1].innerText
+//           const herb = this.parentNode.parentNode.childNodes[1].innerText
            
-            // FETCH REQUEST IS HERE ------------------------
-            fetch('favorite', {
-              //specifying which crud method we are using which is CREATE (put) in this case
-              method: 'put',
-              headers: {'Content-Type': 'application/json'},
-              body: JSON.stringify({
-                herb
-              })
-            })
-            .then(response => {
-              if (response.ok) return response.json()
-            })
-            .then(data => {
-              console.log(data)
-              //reloading the page after every thumbs up
-              window.location.reload(true)
-            })
-          });
-    });
+//             // FETCH REQUEST IS HERE ------------------------
+//             fetch('favorite', {
+//               //specifying which crud method we are using which is CREATE (put) in this case
+//               method: 'put',
+//               headers: {'Content-Type': 'application/json'},
+//               body: JSON.stringify({
+//                 herb
+//               })
+//             })
+//             .then(response => {
+//               if (response.ok) return response.json()
+//             })
+//             .then(data => {
+//               console.log(data)
+//               //reloading the page after every thumbs up
+//               window.location.reload(true)
+//             })
+//           });
+//     });
 
     function edit(id){
-        const herb = this.parentNode.parentNode.childNodes[1].innerText
-       
+        let herb = prompt("add to cabinet")
+        
+      
         fetch('/update', {
           method: 'put',
           headers: {

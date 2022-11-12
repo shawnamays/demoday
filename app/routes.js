@@ -93,8 +93,9 @@ app.post('/post', (req, res) => {
 
 
   app.put('/update', isLoggedIn, (req, res) => {
+    console.log(req.body.id)
     db.collection('myCabinet').findOneAndUpdate({
-    _id: ObjectID(id)
+    _id: ObjectID(req.body.id)
   
     }, {
       $addToSet: {

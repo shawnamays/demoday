@@ -270,12 +270,18 @@ Alternatively if you want to just have a single hero
                     <!-- <h4>my </h4> -->
                     <span>
                       <%= result[i].herb %>
-                      <span><i class="fa fa-trash-o"onclick="edit('<%= result[i]._id %>')" aria-hidden="true"></i></span>
+                     
 
                     </span>
-                  
+
+                    <input class="theStuffInside" type="text" placeholder="change things here">
+
+                   <button onclick="edit('<%= result[i]._id %>')">Edit</button>
+
+
                   </li>
                 <% } %>
+
             </ul>
 
         </div>
