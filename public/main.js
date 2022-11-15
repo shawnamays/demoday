@@ -2,7 +2,7 @@
 // var thumbDown = document.getElementsByClassName("fa-thumbs-down");
 // var trash = document.getElementsByClassName("fa-trash-o");
 
-var favorite = document.getElementsByClassName("fa-trash-o");
+var trash = document.getElementsByClassName("fa-trash-o");
 var love = document.getElementsByClassName("fa-heart-o");
 
 // favorite button is under the class "favorite"
@@ -14,7 +14,7 @@ Array.from(love).forEach(function(element) {
            
             // FETCH REQUEST IS HERE ------------------------
             fetch('post', {
-              //specifying which crud method we are using which is CREATE (put) in this case
+              
               method: 'post',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
@@ -31,6 +31,29 @@ Array.from(love).forEach(function(element) {
             })
           });
     });
+
+
+    Array.from(trash).forEach(function(element) {
+      element.addEventListener('click', function(){
+        const herb = this.parentNode.parentNode.childNodes[1].innerText
+
+        fetch('myCabinet', {
+          method: 'delete',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            herb
+          })
+        }).then(function (response) {
+          window.location.reload(true)
+        })
+      });
+});
+
+
+
+
 
 // Array.from(favorite).forEach(function(element) {
     
@@ -71,6 +94,28 @@ Array.from(love).forEach(function(element) {
           body: JSON.stringify({
             id,
            herb
+          
+          })
+        }).then(function (response) {
+          window.location.reload()
+        })
+      
+      
+      
+      }
+
+
+      function deleteOption(id){
+  
+        
+      
+        fetch('/delete', {
+          method: 'delete',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id
           
           })
         }).then(function (response) {

@@ -130,6 +130,7 @@ Alternatively if you want to just have a single hero
                         
                         
                         <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                        
 
 
                     </div>
@@ -195,7 +196,7 @@ Alternatively if you want to just have a single hero
 
         <div class="container py-8 px-6 mx-auto">
 
-            <h3>My Cabinet</h3>
+            <h3 class="foragedTitle">Herbs That I've Foraged</h3>
       
         
   
@@ -206,16 +207,19 @@ Alternatively if you want to just have a single hero
                 
                   <li class="herbList">
     
-                    <!-- <h4>my </h4> -->
+                   
                     <span>
                       <%= result[i].herb %>
                      
 
                     </span>
 
-                    <input class="theStuffInside" type="text" placeholder="change things here">
+                   
 
                    <button onclick="edit('<%= result[i]._id %>')">Edit</button>
+
+                   <button onclick="deleteOption('<%= result[i]._id %>')">delete</button>
+
 
 
                   </li>

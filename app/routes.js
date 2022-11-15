@@ -92,6 +92,21 @@ app.post('/post', (req, res) => {
   })
 
 
+
+  app.delete('/delete', isLoggedIn, (req, res) => {
+    db.collection('myCabinet').findOneAndDelete({
+      email: req.body.email
+    }, {
+      $pull: {
+        cabinet: req.body.herb
+      }
+    }, (err, result) => {
+      if (err) return res.send(500, err)
+      res.send('Message deleted!')
+    })
+  })
+
+
   app.put('/update', isLoggedIn, (req, res) => {
     console.log(req.body.id)
     db.collection('myCabinet').findOneAndUpdate({
@@ -112,18 +127,7 @@ app.post('/post', (req, res) => {
 
   
 
-  app.delete('/apothecary', isLoggedIn, (req, res) => {
-    db.collection('myCabinet').findOneAndUpdate({
-      email: req.body.email
-    }, {
-      $pull: {
-        cabinet: req.body.herb
-      }
-    }, (err, result) => {
-      if (err) return res.send(500, err)
-      res.send('Message deleted!')
-    })
-  })
+
 
 
 
