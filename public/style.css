@@ -17,7 +17,7 @@ html, body {
 
 body {
   color: #252934;
-  background: #fafafa;
+  background: rgb(60, 91, 5);
   font-size: 62.5%;
   font-family: 'Overlock', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -33,7 +33,7 @@ a:visited {
 
 a:hover,
 a:active {
-  color: #f300b4;
+  color: rgb(221, 197, 165);
 }
 
 
@@ -307,7 +307,7 @@ a:active {
 
 .menu-container a:hover,
 .menu-container a:active {
-  color: #f300b4;
+  color: #ddb462;
 }
 
 @media only screen and (max-width: 649px) {
@@ -453,7 +453,7 @@ a:active {
 .menu-button:hover > span,
 .menu-button:hover > span::before,
 .menu-button:hover > span::after {
-  background: #f300b4;
+  background: #e1b140;
 }
 
 .menu-button.active > span  {
@@ -709,14 +709,14 @@ a:active {
 
 #welcome-section .container .buttons a:hover,
 #welcome-section .container .buttons a:active {
-  border: 1px solid #f300b4;
+  border: 1px solid #e1b140;
   transform: translateY(-2px);
-  box-shadow: 0 10px 100px -20px #f300b4;
+  box-shadow: 0 10px 100px -20px #e1b140;
 }
 
 #welcome-section .container .buttons a.cta,
 #welcome-section .container .buttons a.cta:visited {
-  background: #f300b4;
+  background: #e1b140;
   border: 1px solid transparent;
   color: #fafafa;
   font-weight: bold;
@@ -725,7 +725,7 @@ a:active {
 #welcome-section .container .buttons a.cta:hover,
 #welcome-section .container .buttons a.cta:active {
   background: transparent;
-  border: 1px solid #f300b4;
+  border: 1px solid #e1b140;
 }
 
 #welcome-section .container .buttons a:first-child {
@@ -737,7 +737,7 @@ a:active {
 }
 
 .color {
-  color: #f300b4;
+  color: #e1b140;
   font-style: italic;
 }
 
@@ -831,7 +831,7 @@ a:active {
 }
 
 #about .separator {
-  background: #f300b4;
+  background: #e1b140;
   width: 150px;
   height: 2px;
   margin: 1rem 0;
@@ -917,7 +917,7 @@ a:active {
 
 #projects a,
 #projects a:visited {
-  color: #f300b4;
+  color: #e1b140;
 }
 
 #projects a:hover,
@@ -941,7 +941,7 @@ a:active {
 }
 
 #projects .heading .separator {
-  background: #f300b4;
+  background: #e1b140;
   width: 150px;
   height: 2px;
   margin: 1rem auto;
@@ -1005,7 +1005,7 @@ a:active {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 0;
-  color: #f300b4;
+  color: #e1b140;
 }
 
 /* Icons */
@@ -1039,7 +1039,7 @@ a:active {
   width: 49%;
   padding: .5rem;
   border: none;
-  border-bottom: 1px solid #f300b4;
+  border-bottom: 1px solid #e1b140;
   color: #252934;
   background: #fafafa;
   font-size: 1.2rem;
@@ -1127,7 +1127,7 @@ a:active {
 }
 
 #contact .heading-wrapper .social a:hover {
-  color: #f300b4;
+  color: #e1b140;
 }
 
 .heading-wrapper .heading .title {
@@ -1136,7 +1136,7 @@ a:active {
 }
 
 .heading-wrapper .heading .separator {
-  background: #f300b4;
+  background: #e1b140;
   width: 150px;
   height: 2px;
   margin: 1rem 0;
