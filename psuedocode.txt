@@ -1,0 +1,165 @@
+// PSEUDO CODE TEMPLATE TAKEN FROM ELLIE
+
+
+ - wire framing —> 
+PAGES:
+Landing page -
+
+Sign in/Sign up page -
+
+User profile page -
+
+Foraging/Herb Discovery with randomizer for herbs in the database - 
+
+Apothecary cabinet (multiple parts) (added to foraging page) -
+brewing option in here so that when user clicks on the apothecary cabinet they are sent to the corresponding brew they
+have created.
+
+Healing Progress - tracking progress
+
+
+an app designed to make traditional herbal healing and medicine more accessible and easier to understand.  
+
+Users can search a database of herbs / natural ingredients and put together recipes right in the app based on their unique properties and flavor profiles. 
+
+They can also keep a record of the progress of their symptoms, or how they are improving, and also have the option to take a fun, interactive survey that leads them through a “foraging” journey to create their own pre-made combinations for their discomfort or desired self-improvement.
+
+
+herbs:
+Rasberry Leaf
+medicinal properties: sedative, calms nervous system, supports in menstruation relief
+component: Base
+
+Bergamont
+medicinal properties: lung antiseptic, uplifting energy, immune-boosting 
+component: Base
+
+Mugwort
+medicinal properties: alleviates colds, digestive issues, relaxes bodys, enhances dreams
+component: Base
+
+Skullcap
+medicinal properties: reduces anxiety and insomnia, helps with headaches
+component: Flavor
+
+Lemon Balm
+medicinal properties: calming herb, eases pain, insomnia
+component: Flavor
+
+Chamomile
+medicinal properties: inflammation relief, insomnia, calming herb
+component: Flavor
+
+Rose Petals
+medicinal properties: midly sedative, antiseptic, anti-inflammatory, reduces anxiety
+component: Support
+
+Eucalyptus
+medicinal properties: relieves sore throat, decongestant, pain relief
+component: Support
+
+Blue Lotus
+medicinal properties: sleep aid, anxiety relief
+component: Support
+
+
+
+//leave a rating of herbs/brews
+
+
+// what I want it to do / how users will interact
+allow users to sign up and create an account/log-in
+a menu of herbs to choose from to create an herbal blend
+allow users to add multiple items to their blends
+a link that takes you to the herb page where they can add comments or star the herb
+allow users to rate the herbs/leave comments
+get a confirmation of their order
+recieve an email
+
+
+// properties to send to post method
+what herbs the user clicks on (apothecary page)
+to place the herbs in the cabinet (apothecary page)
+creating their own brew (brew/apothecary page)
+user profile information
+- nam
+
+// properties to send to put method
+editing their recipes (brew/apothecary page)
+
+
+//properties to send to get method
+to get each page
+(landing,login,signup,dashboard,apothecary,tracker)
+
+//properties to send to delete method
+
+// - run server 
+// - create new collection in MongoDB --> change collection names in code (db.collection('<collectionName>'))
+// - check connection to my server 
+
+// - set up front end (inputs, where I want things to be positioned (affects childnodes))
+
+//routes
+// - GET —> how many pages in my app? how many collections? 
+//--> herb list: rename res.render('index.ejs', {<collectionName>: result})
+//--> confirmation page 
+
+// - POST —> form inside of index.ejs -> what inputs / request body information do I want to send to the database? 
+name 
+order
+
+// - PUT —> fetch call through main.js | what am I updating? what identifiers will I use to find that specific document?
+// --> send idenitifier information inside of fetch body. every property inside of JSON body request = req.body.<property> in server.js
+the customers order
+
+// - DELETE —> fetch call through main.js | what identifiers will I use to find that specific document?
+
+
+//how to make project work through https://
+
+app listen:
+const server = https.createServer(credentials, app);
+server.listen(port);
+
+
+//goes into making a https:
+const https  = require('https')
+const fs = require('fs')
+const privateKey  = fs.readFileSync('server.key', 'utf8');
+const certificate = fs.readFileSync('server.cert', 'utf8');
+const credentials = { key: privateKey, cert: certificate };
+
+server.cert, server.key files in main area of folder
+
+
+//stripe receipts
+https://stripe.com/docs/receipts
+
+//checkout with stripe
+https://www.youtube.com/watch?v=1r-F3FIONl8
+https://github.com/WebDevSimplified/stripe-checkout-simple/blob/main/server/server.js
+
+//nodemailer
+https://www.freecodecamp.org/news/use-nodemailer-to-send-emails-from-your-node-js-server/
+https://medium.com/@nickroach_50526/sending-emails-with-node-js-using-smtp-gmail-and-oauth2-316fe9c790a1
+https://nodemailer.com/usage/using-gmail/
+
+//handle errors
+https://stripe.com/docs/api/errors/handling
+
+
+
+//install node fetch:
+npm install node-fetch@2.6.6
+
+//how to use plantID api
+https://github.com/flowerchecker/Plant-id-API/blob/master/javascript/sync_identification_example.html
+
+
+//camera use
+https://usefulangle.com/post/352/javascript-capture-image-from-camera
+
+
+//how to group by date for profile page
+https://stackoverflow.com/questions/46802448/how-do-i-group-items-in-an-array-by-date
