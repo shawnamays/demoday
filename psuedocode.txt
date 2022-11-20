@@ -1,22 +1,6 @@
 // PSEUDO CODE TEMPLATE TAKEN FROM ELLIE
 
-
- - wire framing —> 
-PAGES:
-Landing page -
-
-Sign in/Sign up page -
-
-User profile page -
-
-Foraging/Herb Discovery with randomizer for herbs in the database - 
-
-Apothecary cabinet (multiple parts) (added to foraging page) -
-brewing option in here so that when user clicks on the apothecary cabinet they are sent to the corresponding brew they
-have created.
-
-Healing Progress - tracking progress
-
+// ========= BREW WORK
 
 an app designed to make traditional herbal healing and medicine more accessible and easier to understand.  
 
@@ -25,78 +9,180 @@ Users can search a database of herbs / natural ingredients and put together reci
 They can also keep a record of the progress of their symptoms, or how they are improving, and also have the option to take a fun, interactive survey that leads them through a “foraging” journey to create their own pre-made combinations for their discomfort or desired self-improvement.
 
 
-herbs:
-Rasberry Leaf
-medicinal properties: sedative, calms nervous system, supports in menstruation relief
-component: Base
+=========== //
 
-Bergamont
-medicinal properties: lung antiseptic, uplifting energy, immune-boosting 
-component: Base
 
-Mugwort
-medicinal properties: alleviates colds, digestive issues, relaxes bodys, enhances dreams
-component: Base
+========================= /////// wire framing —> 
 
-Skullcap
-medicinal properties: reduces anxiety and insomnia, helps with headaches
-component: Flavor
 
-Lemon Balm
-medicinal properties: calming herb, eases pain, insomnia
-component: Flavor
+/////////////// PAGES:
+
+===== Landing page - The initial Brew Work page
+
+===== Sign in/Sign up page - Where user can login or click the signup button and go to the signup page
+
+===== User profile page - The Dashboard which shows: MONTHLY HEALING PROGRESS, TIMES I'VE BREWED, HERBS IN CABINET, BREW RECIPES SAVED, LENGTH OF HEALING JOURNEY
+
+===== Foraging/Herb Discovery (with randomizer for herbs in the database) - A page with a survey to find a new herb that suits their needs.  Other side of the page will be a randomizer if user does not want to "go foraging".  Below this will be the CABINET WHERE THE HERBS ARE STORED AND APPEAR ONCE THEY ARE CHOSEN FROM THE FORAGING SURVEY/RANDOMIZER OPTION.
+
+///// Apothecary cabinet (multiple parts) (added to bottom of ^^ foraging page) -
+Users can open the cabinet and see their herbs displayed.  When they CLICK on the herb, the corresponding recipes you have created from that herb category will show up that you've already stored (i.e: you click on "lavender" and are shown "lavender rose tea", "lavender honey", "lavender aromatherapy smudge stick").
+
+
+===== Progress Page - tracking progress page that displays: LENGTH OF DURATION OF WELLNESS JOURNEY // A COUNTER FOR HOW MANY TIMES USER HAS CREATED A NEW RECIPE // AN AREA WHERE USER CAN ENTER TEXT TO RECORD SYMPTOMS AND AN ABILITY TO CHOOSE FROM A SPECTRUM IF THEY FELT GOOD OR BAD THAT DAY AND AN ABILITY TO CHECK OFF IF THEY USED A REMEDY OR NOT // A GRAPH / CHART DISPLAYING THESE VALUES
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+HERBS AND ROOTS:
+
+Rosemary
+medicinal properties: 
+tastes like:
+goes well with:
+
+Ginger
+medicinal properties: 
+tastes like:
+goes well with:
 
 Chamomile
 medicinal properties: inflammation relief, insomnia, calming herb
-component: Flavor
+tastes like:
+goes well with:
 
 Rose Petals
 medicinal properties: midly sedative, antiseptic, anti-inflammatory, reduces anxiety
-component: Support
+tastes like:
+goes well with:
 
 Eucalyptus
 medicinal properties: relieves sore throat, decongestant, pain relief
-component: Support
+tastes like:
+goes well with:
 
-Blue Lotus
-medicinal properties: sleep aid, anxiety relief
-component: Support
+Lavender
+medicinal properties: 
+tastes like:
+goes well with:
+
+// ====== ****** USER can leave a rating of herbs/roots **(if possible by demo day)
+=================================================================================
 
 
 
-//leave a rating of herbs/brews
+//****** | what I want it to do / how users will interact | *******//
 
+- allow users to sign up and create an account/log-in
 
-// what I want it to do / how users will interact
-allow users to sign up and create an account/log-in
-a menu of herbs to choose from to create an herbal blend
-allow users to add multiple items to their blends
-a link that takes you to the herb page where they can add comments or star the herb
-allow users to rate the herbs/leave comments
-get a confirmation of their order
-recieve an email
+- a foraging survey page that gives an herb/root as a result when the user answers 4 questions.
 
+- user is able to click a star rating on if they like the herb or not
+
+- if the user clicks *heart* the herb is added to their cabinet below.
+
+- cabinet has herbs and allow user to choose from to add multiple herbs/roots and create an unique brew blend.
+
+- when user is "brewing" (building a recipe herbal blend), provide BASE ingredients and label as optional but recommended.
+
+- user is able to enter a start date onto wellness journey tracker on progress page. days are then counted.
+
+- user is able to enter symptoms in "journal" like fashion in a textarea on progress page.
+
+- user is able to choose from excellent to poor on a spectrum to indicate how they feel that day.
+
+- user is able to check a box indicating that they used a remedy that day or did not.
+
+- a counter that updates everytime "create a new brew" button is pressed in the FORAGING/CABINET page it either increments UP or DOWN depending on if a brew is added or deleted.
+
+=====================================================================
 
 // properties to send to post method
-what herbs the user clicks on (apothecary page)
-to place the herbs in the cabinet (apothecary page)
-creating their own brew (brew/apothecary page)
-user profile information
-- nam
 
-// properties to send to put method
-editing their recipes (brew/apothecary page)
+FORAGING/CABINET PAGE:
+
+POST what herbs the user *hearts* to cabinet below
+POST survey result of HERB/ROOT 
+POST user recipe/notes/textarea about herb
+POST user star rating/comment about herb
+
+USER PROFILE PAGE:
+
+POST the user profile photo
+POST the username
+POST the email address
 
 
-//properties to send to get method
-to get each page
-(landing,login,signup,dashboard,apothecary,tracker)
+PROGRESS PAGE:
 
-//properties to send to delete method
+POST journal textarea asking about feelings, symptoms, updates.
+POST mood/feeling rating scale 1-10
+POST checkbox next to "used remedy" | "did not use rememdy"
+POST counter with number of times recipes have been made
+POST counter with number of herbs in cabinet currently.
 
-// - run server 
-// - create new collection in MongoDB --> change collection names in code (db.collection('<collectionName>'))
-// - check connection to my server 
+
+
+==============================================
+
+// properties to send to PUT method
+
+
+FORAGING/CABINET PAGE:
+
+PUT an ability to edit the recipe.
+PUT an ability to update cabinet with additional roots/herbs
+
+USER PROFILE PAGE:
+
+PUT ability to update user photo
+
+
+
+PROGRESS PAGE:
+
+PUT user is able to edit journal entry and mood/feeling scale.
+PUT counter with number of times recipes have been made that updates everytime a recipe is submitted
+PUT counter with number of herbs in cabinet currently that updates everytime a herb/root is *hearted*
+
+=========================================================================
+
+//properties to send to GET method 
+
+LANDING PAGE: GET the page.
+
+SIGN IN PAGE: GET the page.
+
+SIGN UP PAGE: GET the page.
+
+DASHBOARD PAGE: GET the page.
+
+FORAGING/CABINET PAGE: GET the page.
+(GET the survey??)
+
+USER PROFILE PAGE: GET the page.
+
+PROGRESS PAGE: GET the page.
+
+===============================================================
+
+
+//properties to send to DELETE method
+
+
+FORAGING/CABINET PAGE:
+DELETE herbs from cabinet
+DELETE recipe from collection
+
+
+PROGRESS PAGE:
+
+DELETE progress entry
+
+
+
+/// ****************************************************************** \\\
 
 // - set up front end (inputs, where I want things to be positioned (affects childnodes))
 
@@ -116,7 +202,11 @@ the customers order
 // - DELETE —> fetch call through main.js | what identifiers will I use to find that specific document?
 
 
-//how to make project work through https://
+
+
+
+
+//how to make project work through https:// ================================================
 
 app listen:
 const server = https.createServer(credentials, app);
@@ -133,20 +223,7 @@ const credentials = { key: privateKey, cert: certificate };
 server.cert, server.key files in main area of folder
 
 
-//stripe receipts
-https://stripe.com/docs/receipts
 
-//checkout with stripe
-https://www.youtube.com/watch?v=1r-F3FIONl8
-https://github.com/WebDevSimplified/stripe-checkout-simple/blob/main/server/server.js
-
-//nodemailer
-https://www.freecodecamp.org/news/use-nodemailer-to-send-emails-from-your-node-js-server/
-https://medium.com/@nickroach_50526/sending-emails-with-node-js-using-smtp-gmail-and-oauth2-316fe9c790a1
-https://nodemailer.com/usage/using-gmail/
-
-//handle errors
-https://stripe.com/docs/api/errors/handling
 
 
 
