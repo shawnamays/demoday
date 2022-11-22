@@ -53,7 +53,13 @@ Array.from(love).forEach(function(element) {
 
 
 
+(function ($) {
+  $(function () {
 
+    
+
+  });
+})(jQuery);
 
 // Array.from(favorite).forEach(function(element) {
     

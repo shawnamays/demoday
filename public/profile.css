@@ -1,17 +1,353 @@
 /* ===== User profile page - The Dashboard which shows: MONTHLY HEALING PROGRESS, TIMES I'VE BREWED, HERBS IN CABINET, BREW RECIPES SAVED, LENGTH OF HEALING JOURNEY */
-body {
-    background-color: burlywood;
-}
+
+/*font-family: 'Germania One', cursive;
+font-family: 'Griffy', cursive;
+font-family: 'Zilla Slab Highlight', cursive;
+*/
+
+    /* background-image: url(https://images.unsplash.com/photo-1658332603826-0ca3caed1014?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80);
+    background-repeat: no-repeat;
+    background-size: 100%; */
+
+
+.ag-format-container {
+    width: 1142px;
+    margin: 0 auto;
+  }
+  
+  
+  img {
+    max-width: 100%;
+  }
+  
+  body {
+    background-color: #000;
+  }
+  .ag-smoke-block {
+    z-index: 4;
+    position: relative;
+  }
+  .ag-smoke-1 {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+  
+    -webkit-animation: an-smoke-1 6s ease-in-out infinite;
+    -moz-animation: an-smoke-1 6s ease-in-out infinite;
+    -o-animation: an-smoke-1 6s ease-in-out infinite;
+    animation: an-smoke-1 6s ease-in-out infinite;
+  }
+  .ag-smoke-2 {
+    width: 57.1em;
+  
+    z-index: -2;
+    top: 7em;
+  }
+  .ag-smoke-2,
+  .ag-smoke-3 {
+    position: absolute;
+    left: 0;
+  
+    -webkit-animation: an-smoke-2 6s ease-in-out infinite;
+    -moz-animation: an-smoke-2 6s ease-in-out infinite;
+    -o-animation: an-smoke-2 6s ease-in-out infinite;
+    animation: an-smoke-2 6s ease-in-out infinite;
+  }
+  .ag-smoke-3 {
+    width: 100%;
+  
+    z-index: -4;
+    top: -32em;
+  }
+  .ag-smoke-4 {
+    width: 61.4em;
+  
+    z-index: -3;
+    position: absolute;
+    top: 12em;
+    right: 0;
+  
+    -webkit-animation: an-smoke-3 6s ease-in-out infinite;
+    -moz-animation: an-smoke-3 6s ease-in-out infinite;
+    -o-animation: an-smoke-3 6s ease-in-out infinite;
+    animation: an-smoke-3 6s ease-in-out infinite;
+  }
+  .ag-smoke__delay-1 {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  .ag-smoke__delay-2 {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+  
+  @-webkit-keyframes an-smoke-1 {
+    0% {
+      opacity: 0;
+  
+      -webkit-transform: translateY(5%) rotate(.01deg);
+      transform: translateY(5%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -webkit-transform: translateY(0) rotate(.01deg);
+      transform: translateY(0) rotate(.01deg);
+    }
+  }
+  @-moz-keyframes an-smoke-1 {
+    0% {
+      opacity: 0;
+  
+      -moz-transform: translateY(5%) rotate(.01deg);
+      transform: translateY(5%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -moz-transform: translateY(0) rotate(.01deg);
+      transform: translateY(0) rotate(.01deg);
+    }
+  }
+  @-o-keyframes an-smoke-1 {
+    0% {
+      opacity: 0;
+  
+      -o-transform: translateY(5%) rotate(.01deg);
+      transform: translateY(5%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -o-transform: translateY(0) rotate(.01deg);
+      transform: translateY(0) rotate(.01deg);
+    }
+  }
+  @keyframes an-smoke-1 {
+    0% {
+      opacity: 0;
+  
+      -webkit-transform: translateY(5%) rotate(.01deg);
+      -moz-transform: translateY(5%) rotate(.01deg);
+      -o-transform: translateY(5%) rotate(.01deg);
+      transform: translateY(5%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -webkit-transform: translateY(0) rotate(.01deg);
+      -moz-transform: translateY(0) rotate(.01deg);
+      -o-transform: translateY(0) rotate(.01deg);
+      transform: translateY(0) rotate(.01deg);
+    }
+  }
+  
+  @-webkit-keyframes an-smoke-2 {
+    0% {
+      opacity: 0;
+  
+      -webkit-transform: translate(-10%, 10%) rotate(.01deg);
+      transform: translate(-10%, 10%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -webkit-transform: translateY(5%) rotate(.01deg);
+      transform: translateY(5%) rotate(.01deg);
+    }
+  }
+  @-moz-keyframes an-smoke-2 {
+    0% {
+      opacity: 0;
+  
+      -moz-transform: translate(-10%, 10%) rotate(.01deg);
+      transform: translate(-10%, 10%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -moz-transform: translateY(5%) rotate(.01deg);
+      transform: translateY(5%) rotate(.01deg);
+    }
+  }
+  @-o-keyframes an-smoke-2 {
+    0% {
+      opacity: 0;
+  
+      -o-transform: translate(-10%, 10%) rotate(.01deg);
+      transform: translate(-10%, 10%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -o-transform: translateY(5%) rotate(.01deg);
+      transform: translateY(5%) rotate(.01deg);
+    }
+  }
+  @keyframes an-smoke-2 {
+    0% {
+      opacity: 0;
+  
+      -webkit-transform: translate(-10%, 10%) rotate(.01deg);
+      -moz-transform: translate(-10%, 10%) rotate(.01deg);
+      -o-transform: translate(-10%, 10%) rotate(.01deg);
+      transform: translate(-10%, 10%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -webkit-transform: translateY(5%) rotate(.01deg);
+      -moz-transform: translateY(5%) rotate(.01deg);
+      -o-transform: translateY(5%) rotate(.01deg);
+      transform: translateY(5%) rotate(.01deg);
+    }
+  }
+  
+  @-webkit-keyframes an-smoke-3 {
+    0% {
+      opacity: 0;
+  
+      -webkit-transform: translateY(10%) rotate(.01deg);
+      transform: translateY(10%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -webkit-transform: translate(-10%, 5%) rotate(.01deg);
+      transform: translate(-10%, 5%) rotate(.01deg);
+    }
+  }
+  @-moz-keyframes an-smoke-3 {
+    0% {
+      opacity: 0;
+  
+      -moz-transform: translateY(10%) rotate(.01deg);
+      transform: translateY(10%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -moz-transform: translate(-10%, 5%) rotate(.01deg);
+      transform: translate(-10%, 5%) rotate(.01deg);
+    }
+  }
+  @-o-keyframes an-smoke-3 {
+    0% {
+      opacity: 0;
+  
+      -o-transform: translateY(10%) rotate(.01deg);
+      transform: translateY(10%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -o-transform: translate(-10%, 5%) rotate(.01deg);
+      transform: translate(-10%, 5%) rotate(.01deg);
+    }
+  }
+  @keyframes an-smoke-3 {
+    0% {
+      opacity: 0;
+  
+      -webkit-transform: translateY(10%) rotate(.01deg);
+      -moz-transform: translateY(10%) rotate(.01deg);
+      -o-transform: translateY(10%) rotate(.01deg);
+      transform: translateY(10%) rotate(.01deg);
+    }
+    50% {
+      opacity: .9;
+    }
+    to {
+      opacity: 0;
+  
+      -webkit-transform: translate(-10%, 5%) rotate(.01deg);
+      -moz-transform: translate(-10%, 5%) rotate(.01deg);
+      -o-transform: translate(-10%, 5%) rotate(.01deg);
+      transform: translate(-10%, 5%) rotate(.01deg);
+    }
+  }
+  
+  
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 639px) {
+  
+  }
+  
+  @media only screen and (max-width: 479px) {
+  
+  }
+  
+  @media (min-width: 768px) and (max-width: 979px) {
+    .ag-format-container {
+      width: 750px;
+    }
+  
+  }
+  
+  @media (min-width: 980px) and (max-width: 1161px) {
+    .ag-format-container {
+      width: 960px;
+    }
+  
+  }
+  
 
 .container {
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 2fr 2fr 2fr; 
     grid-template-rows: 1fr 1fr; 
     gap: 10px 10px; 
     grid-template-areas: 
       ". . ."
       ". . ."; 
-      border: 2px solid black;
+    
+      opacity: 0.5;
+      background: rgb(255,132,0);
+background: radial-gradient(circle, rgba(255,132,0,1) 0%, rgba(231,206,137,1) 100%);
   }
 
 
@@ -29,10 +365,24 @@ body {
   }
 
 
-  /* TIMES I'VE BREWED (A NUMBER) */
+ /*THE CENTRAL LOGO BLOCK*/
   .box2 {
 
     border: 2px solid red;
+    font-family: 'Griffy', cursive;
+  }
+
+  .appTitle {
+font-size: 50px;
+width: 30%;
+border: 2px solid red;
+  }
+
+  .halfTitle {
+    font-size: 50px;
+    color: purple;
+    border: 2px solid red;
+    width: 30%;
   }
 
 
@@ -64,7 +414,7 @@ body {
     margin-top: 20%;
     
   }
-
+ /* TIMES I'VE BREWED (A NUMBER) */
   .box6 {
 
     border: 2px solid red;
