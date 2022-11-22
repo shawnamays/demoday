@@ -1,4 +1,71 @@
-
+/* ===== User profile page - The Dashboard which shows: MONTHLY HEALING PROGRESS, TIMES I'VE BREWED, HERBS IN CABINET, BREW RECIPES SAVED, LENGTH OF HEALING JOURNEY */
 body {
     background-color: burlywood;
 }
+
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."; 
+      border: 2px solid black;
+  }
+
+
+  /* MONTHLY HEALING PROGRESS (A PROGRESS BAR TOWARDS ACHIEVEMENT) */
+  .box1 {
+
+    border: 2px solid red;
+  }
+
+  .healingBar{
+    width: 50%;
+    height: 50px;
+    margin-left: 20%;
+    margin-top: 20%;
+  }
+
+
+  /* TIMES I'VE BREWED (A NUMBER) */
+  .box2 {
+
+    border: 2px solid red;
+  }
+
+
+  /*NUMBER OF HERBS IN CABINET (A NUMBER) */
+
+  .box3 {
+
+    border: 2px solid red;
+  }
+
+  /* NUMBER OF SAVED RECIPES IN CABINET (A NUMBER) */
+  .box4 {
+
+    border: 2px solid red;
+  }
+
+  /* DAYS OF JOURNEY (A NUMBER OR CALENDAR) */
+
+  .box5 {
+
+    border: 2px solid red;
+  }
+
+  .lengthBar {
+
+    width: 50%;
+    height: 50px;
+    margin-left: 30%;
+    margin-top: 20%;
+    
+  }
+
+  .box6 {
+
+    border: 2px solid red;
+  }
