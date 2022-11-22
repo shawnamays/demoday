@@ -9,7 +9,103 @@ font-family: 'Zilla Slab Highlight', cursive;
     background-repeat: no-repeat;
     background-size: 100%; */
 
+    #menu {
+        background: #0099CC;
+        background: linear-gradient(to bottom,  #731BCC,  #0B001F);
+        color: #FFF;
+        height: 73px;
+        padding-left: 18px;
+        border-radius: 10px;
+    }
+    #menu ul, #menu li {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none
+    }
+    #menu ul {
+        width: 100%;
+    }
+    #menu li {
+        float: left;
+        display: inline;
+        position: relative;
+    }
+    #menu a {
+        display: block;
+        line-height: 73px;
+        padding: 0 14px;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 19px;
+        text-transform: lowercase;
+    }
+    #menu a.dropdown-arrow:after {
+        content: "\25BE";
+        margin-left: 5px;
+    }
+    #menu li a:hover {
+        color: #7914C7;
+        background: #000000;
+    }
+    #menu input {
+        display: none;
+        margin: 0;
+        padding: 0;
+        height: 73px;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer
+    }
+    #menu label {
+        display: none;
+        line-height: 73px;
+        text-align: center;
+        position: absolute;
+        left: 35px
+    }
+    #menu label:before {
+        font-size: 1.6em;
+        content: "\2261"; 
+        margin-left: 20px;
+    }
+    #menu ul.sub-menus{
+        height: auto;
+        overflow: hidden;
+        width: 170px;
+        background: #444444;
+        position: absolute;
+        z-index: 99;
+        display: none;
+    }
+    #menu ul.sub-menus li {
+        display: block;
+        width: 100%;
+    }
+    #menu ul.sub-menus a {
+        color: #FFFFFF;
+        font-size: 16px;
+    }
+    #menu li:hover ul.sub-menus {
+        display: block
+    }
+    #menu ul.sub-menus a:hover{
+        background: #F2F2F2;
+        color: #444444;
+    }
+    @media screen and (max-width: 800px){
+        #menu {position:relative}
+        #menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+        #menu ul.sub-menus {width:100%;position:static;}
+        #menu ul.sub-menus a {padding-left:30px;}
+        #menu li {display:block;float:none;width:auto;}
+        #menu input, #menu label {position:absolute;top:0;left:0;display:block}
+        #menu input {z-index:4}
+        #menu input:checked + label {color:white}
+        #menu input:checked + label:before {content:"\00d7"}
+        #menu input:checked ~ ul {display:block}
+    }
 
+    
 .ag-format-container {
     width: 1142px;
     margin: 0 auto;
@@ -344,21 +440,26 @@ font-family: 'Zilla Slab Highlight', cursive;
     grid-template-areas: 
       ". . ."
       ". . ."; 
+    margin: auto;
     
-      opacity: 0.5;
-      background: rgb(255,132,0);
-background: radial-gradient(circle, rgba(255,132,0,1) 0%, rgba(231,206,137,1) 100%);
+      opacity: 0.4;
+      border-radius: 2%;
+      background: rgb(107, 30, 207);
+background: radial-gradient(circle, rgb(194, 110, 244) 0%, rgb(112, 0, 43) 100%);
+width: 50%;
+font-family: 'Germania One', cursive;
   }
 
 
   /* MONTHLY HEALING PROGRESS (A PROGRESS BAR TOWARDS ACHIEVEMENT) */
   .box1 {
-
-    border: 2px solid red;
+    font-size: 30px;
+    text-align: center;
+    
   }
 
   .healingBar{
-    width: 50%;
+    width: 60%;
     height: 50px;
     margin-left: 20%;
     margin-top: 20%;
@@ -367,21 +468,22 @@ background: radial-gradient(circle, rgba(255,132,0,1) 0%, rgba(231,206,137,1) 10
 
  /*THE CENTRAL LOGO BLOCK*/
   .box2 {
-
-    border: 2px solid red;
+   
+    display: flex;
+    flex-direction: row;
     font-family: 'Griffy', cursive;
   }
 
   .appTitle {
 font-size: 50px;
 width: 30%;
-border: 2px solid red;
+
   }
 
   .halfTitle {
     font-size: 50px;
-    color: purple;
-    border: 2px solid red;
+    color: rgb(62, 1, 115);
+
     width: 30%;
   }
 
@@ -389,26 +491,26 @@ border: 2px solid red;
   /*NUMBER OF HERBS IN CABINET (A NUMBER) */
 
   .box3 {
-
-    border: 2px solid red;
+    text-align: center;
+    font-size: 30px;
   }
 
   /* NUMBER OF SAVED RECIPES IN CABINET (A NUMBER) */
   .box4 {
-
-    border: 2px solid red;
+    text-align: center;
+    font-size: 30px;    
   }
 
   /* DAYS OF JOURNEY (A NUMBER OR CALENDAR) */
 
   .box5 {
-
-    border: 2px solid red;
+    font-size: 30px;
+    text-align: center;
   }
 
   .lengthBar {
 
-    width: 50%;
+    width: 60%;
     height: 50px;
     margin-left: 30%;
     margin-top: 20%;
@@ -417,5 +519,10 @@ border: 2px solid red;
  /* TIMES I'VE BREWED (A NUMBER) */
   .box6 {
 
-    border: 2px solid red;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .brewNumber {
+    font-size: 80px;
   }
