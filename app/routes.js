@@ -40,6 +40,16 @@ ObjectID = require('mongodb').ObjectID
   });
 
 
+  //I WANT TO BREW ===================================
+  app.get('/brew', isLoggedIn, function (req, res) {
+    db.collection('demoDay').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('brew.ejs', {
+        
+      })
+    })
+  });
+
   // LOGOUT ==============================
   // get is the read in CRUD
   app.get('/logout', function (req, res) {
