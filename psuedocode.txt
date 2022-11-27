@@ -23,7 +23,7 @@ They can also keep a record of the progress of their symptoms, or how they are i
 
 ===== User profile page - The Dashboard which shows: MONTHLY HEALING PROGRESS, TIMES I'VE BREWED, HERBS IN CABINET, BREW RECIPES SAVED, LENGTH OF HEALING JOURNEY
 
-===== Foraging/Herb Discovery (with randomizer for herbs in the database) - A page with a survey to find a new herb that suits their needs.  Other side of the page will be a randomizer if user does not want to "go foraging".  Below this will be the CABINET WHERE THE HERBS ARE STORED AND APPEAR ONCE THEY ARE CHOSEN FROM THE FORAGING SURVEY/RANDOMIZER OPTION.
+===== Foraging/Herb Discovery (with randomizer for herbs in the database) - A page with a survey to find a new herb that suits their needs.  Other side of the page will be a randomizer if user does not want to "go                 foraging".  Below this will be the CABINET WHERE THE HERBS ARE STORED AND APPEAR ONCE THEY ARE CHOSEN FROM THE FORAGING SURVEY/RANDOMIZER OPTION.
 
 ///// Apothecary cabinet (multiple parts) (added to bottom of ^^ foraging page) -
 Users can open the cabinet and see their herbs displayed.  When they CLICK on the herb, the corresponding recipes you have created from that herb category will show up that you've already stored (i.e: you click on "lavender" and are shown "lavender rose tea", "lavender honey", "lavender aromatherapy smudge stick").

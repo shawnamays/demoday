@@ -81,13 +81,15 @@ ObjectID = require('mongodb').ObjectID
 
 
  app.get('/apothecary', isLoggedIn, function (req, res) {
-  db.collection('myCabinet').find().toArray((err, result) => {
+  db.collection('herbs').find().toArray((err, result) => {
     if (err) return console.log(err)
     res.render('apothecary.ejs', {
-      result: result
+      herbs: result
     })
   })
 });
+
+
 
 app.post('/post', (req, res) => {
     db.collection('myCabinet').save({
