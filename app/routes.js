@@ -60,6 +60,26 @@ ObjectID = require('mongodb').ObjectID
     })
   });
 
+  app.post('/trackJourney', (req, res) => {
+    console.log(req.body)
+    db.collection('journey').insertOne({
+      user: req.user.local.email,
+      date: new Date().toLocaleDateString(),
+      mood: req.body.mood,
+      energy: req.body.energy,
+      usedRemedy: Boolean(req.body.usedRemedy),
+      remedy: req.body.remedy,
+      notes: req.body.notes
+      
+
+    }, (err, result) => {
+      if (err) return console.log(err)
+      console.log('saved to database')
+    
+    })
+    res.redirect('/healingTracker');
+  })
+
   // LOGOUT ==============================
   // get is the read in CRUD
   app.get('/logout', function (req, res) {
