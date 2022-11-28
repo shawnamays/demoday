@@ -50,6 +50,16 @@ ObjectID = require('mongodb').ObjectID
     })
   });
 
+  // HEALING PROGRESS TRACKER ==============================
+  app.get('/healingtracker', isLoggedIn, function (req, res) {
+    db.collection('demoDay').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('healingtracker.ejs', {
+        
+      })
+    })
+  });
+
   // LOGOUT ==============================
   // get is the read in CRUD
   app.get('/logout', function (req, res) {

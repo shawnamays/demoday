@@ -1,147 +1,120 @@
-<!--THIS IS THE PAGE WHERE THE USER CAN PUT BREWS TOGETHER BASED OFF OF THE HERBS THEY 
-ALREADY OWN IN THEIR CABINET! DISPLAY A LIST OF THE HERBS AVAILABLE FOR USE
-AND ALLOW THEM TO COMBINE THEM INTO A RECIPE THAT SHOWS FLAVOR PROFILE-->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Brewing Cauldron</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="brew.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
-</head>
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h4>Herbs Currently In My Inventory</h4>
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Rosemary</a></li>
-        <li><a href="#section2">Ginger</a></li>
-        <li><a href="#section3">Ashwaghanda</a></li>
-        <li><a href="#section3">Photos</a></li>
-      </ul><br>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search My Cabinet For More">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-    <br>
-    
-      </div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-      <div class="bases">
-
-      <ul class="unorderedlistOfBases">
-        <li class="listBases">
-            <a href="#">General Base</a>
-            <ul>
-                <li>hot water</li>
-                <li>sweetener</li>
-                <li>hot water</li>
-            </ul>
-            </li>
-            
-        <li><a href="#">Spiced Base</a>
-        <ul>
-            <li>hot water</li>
-            <li>chai</li>
-            <li>cinnamon</li>
-        </ul></li>
-        <li><a href="#">Milk Base</a>
-            <ul>
-                <li>hot milk</li>
-                <li>hot water</li>
-                <li>hot water</li>
-            </ul></li>
-
-            <li><a href="#">Citrus Base</a>
-                <ul>
-                    <li>pineapple juice</li>
-                    <li>lemon juice</li>
-                    <li>honey</li>
-                </ul></li>
-       
-      </ul>
-
-    </div>
-
-      
-    </div>
-
-    
-
-    <div class="col-sm-9">
-      <h4><small>Let's Brew Something Great</small></h4>
-      <hr>
-      <h2>I Love Food</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><br>
-      
-      <h4><small>RECENT RECIPIES</small></h4>
-      <hr>
-      <h2>Officially Blogging</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-
-      <h4>Leave a Comment:</h4>
-      <form role="form">
-        <div class="form-group">
-          <textarea class="form-control" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-      </form>
-      <br><br>
-      
-      <p><span class="badge">2</span> Comments:</p><br>
-      
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container text-center">
       <div class="row">
-        <div class="col-sm-2 text-center">
-          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
-          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br>
-        </div>
-        <div class="col-sm-2 text-center">
-          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
-          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br>
-          <p><span class="badge">1</span> Comment:</p><br>
-          <div class="row">
-            <div class="col-sm-2 text-center">
-              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Bases To Start With
             </div>
-            <div class="col-xs-10">
-              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
-              <p>Me too! WOW!</p>
-              <br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Standard Base
+               <br>
+               description
+              </li>
+              <li class="list-group-item">Citrus Base
+                <br>
+               description
+              </li>
+              <li class="list-group-item">Dairy Base
+                <br>
+               description
+              </li>
+              <li class="list-group-item">Spiced Base
+                <br>
+               description
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Name Your New Brew!</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name your brew">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Choose A Base</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Standard</option>
+                <option>Citrus</option>
+                <option>Dairy</option>
+                <option>Spiced</option>
+               
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect2">Choose The Herbs From Your Cabinet</label>
+              <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>Osha Root</option>
+                <option>Ginger Root</option>
+                <option>Cinnamon</option>
+                <option>Rosemary</option>
+                <option>Calendula</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">How will you prepare your brew?</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button>Brew Some Magick!</button>
+          </form>
+        </div>
+        <div class="col">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Nausea Remedy Tea</h5>
+                <small>1 day ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small>Donec id elit non mi porta.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Headache Relief Tonic</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small class="text-muted">Donec id elit non mi porta.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Pain Relief Tincture</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small class="text-muted">Donec id elit non mi porta.</small>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
-
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>

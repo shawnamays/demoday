@@ -1,1 +1,150 @@
 <!--this page is where the user is able to track their healing progress-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="healingtracker.css">
+
+    <title>Progress Page</title>
+  </head>
+  <body>
+
+    <!--PROGRESS PAGE:
+
+POST journal textarea asking about feelings, symptoms, updates.
+POST mood/feeling rating scale 1-10
+POST checkbox next to "used remedy" | "did not use rememdy"
+POST counter with number of times recipes have been made
+POST counter with number of herbs in cabinet currently.  -->
+    <h1>Healing Journey Progress</h1>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+           <img class="moodTracker" src="https://static.vecteezy.com/system/resources/previews/012/188/656/non_2x/doodle-emoji-loading-bar-hand-drawn-progress-bar-with-upload-status-from-sad-to-happy-emoji-black-on-white-shaded-mood-loading-bar-mood-ratings-isolated-illustration-vector.jpg">
+           <img class="moodTracker" src="https://static.vecteezy.com/system/resources/previews/012/188/656/non_2x/doodle-emoji-loading-bar-hand-drawn-progress-bar-with-upload-status-from-sad-to-happy-emoji-black-on-white-shaded-mood-loading-bar-mood-ratings-isolated-illustration-vector.jpg">
+           <img class="moodTracker" src="https://static.vecteezy.com/system/resources/previews/012/188/656/non_2x/doodle-emoji-loading-bar-hand-drawn-progress-bar-with-upload-status-from-sad-to-happy-emoji-black-on-white-shaded-mood-loading-bar-mood-ratings-isolated-illustration-vector.jpg">
+
+          </div>
+          <div class="col-sm">
+            <div class="rendered-form">
+                <div class="">
+                    <h1 access="false" id="control-4916268">Today's Progress Entry</h1></div>
+                <div class="formbuilder-radio-group form-group field-radio-group-1669610492667">
+                    <label for="radio-group-1669610492667" class="formbuilder-radio-group-label">How's Your Mood?</label>
+                    <div class="radio-group">
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610492667" access="false" id="radio-group-1669610492667-0" value="option-1" type="radio">
+                            <label for="radio-group-1669610492667-0">Happy</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610492667" access="false" id="radio-group-1669610492667-1" value="option-2" type="radio">
+                            <label for="radio-group-1669610492667-1">Sad</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610492667" access="false" id="radio-group-1669610492667-2" value="option-3" type="radio">
+                            <label for="radio-group-1669610492667-2">Angry</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610492667" access="false" id="radio-group-1669610492667-3" type="radio">
+                            <label for="radio-group-1669610492667-3">Content</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610492667" access="false" id="radio-group-1669610492667-4" type="radio">
+                            <label for="radio-group-1669610492667-4">Anxious</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="formbuilder-radio-group form-group field-radio-group-1669610888258">
+                    <label for="radio-group-1669610888258" class="formbuilder-radio-group-label">How's Your Energy?</label>
+                    <div class="radio-group">
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610888258" access="false" id="radio-group-1669610888258-0" value="option-1" type="radio">
+                            <label for="radio-group-1669610888258-0">Tired</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610888258" access="false" id="radio-group-1669610888258-1" value="option-2" type="radio">
+                            <label for="radio-group-1669610888258-1">Very Tired</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610888258" access="false" id="radio-group-1669610888258-2" value="option-3" type="radio">
+                            <label for="radio-group-1669610888258-2">Can't Even Get Out Of Bed</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610888258" access="false" id="radio-group-1669610888258-3" type="radio">
+                            <label for="radio-group-1669610888258-3">Normal</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610888258" access="false" id="radio-group-1669610888258-4" type="radio">
+                            <label for="radio-group-1669610888258-4">Perked Up</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610888258" access="false" id="radio-group-1669610888258-5" type="radio">
+                            <label for="radio-group-1669610888258-5">Wicked Excited</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1669610888258" access="false" id="radio-group-1669610888258-6" type="radio">
+                            <label for="radio-group-1669610888258-6">Manic</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="formbuilder-checkbox-group form-group field-checkbox-group-1669610634456">
+                    <label for="checkbox-group-1669610634456" class="formbuilder-checkbox-group-label">Did You Use A Remedy?</label>
+                    <div class="checkbox-group">
+                        <div class="formbuilder-checkbox">
+                            <input name="checkbox-group-1669610634456[]" access="false" id="checkbox-group-1669610634456-0" value="option-1" type="checkbox">
+                            <label for="checkbox-group-1669610634456-0">Yes</label>
+                        </div>
+                        <div class="formbuilder-checkbox">
+                            <input name="checkbox-group-1669610634456[]" access="false" id="checkbox-group-1669610634456-1" type="checkbox">
+                            <label for="checkbox-group-1669610634456-1">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="formbuilder-textarea form-group field-textarea-1669610716645">
+                    <label for="textarea-1669610716645" class="formbuilder-textarea-label">What Remedy Did You Use?</label>
+                    <textarea type="textarea" class="form-control" name="textarea-1669610716645" access="false" id="textarea-1669610716645"></textarea>
+                </div>
+                <div class="formbuilder-textarea form-group field-textarea-1669611009422">
+                    <label for="textarea-1669611009422" class="formbuilder-textarea-label">Anything Else?</label>
+                    <textarea type="textarea" class="form-control" name="textarea-1669611009422" access="false" id="textarea-1669611009422"></textarea>
+                </div>
+                <div class="formbuilder-button form-group field-button-1669611036351">
+                    <button type="submit" class="btn-success btn" name="button-1669611036351" access="false" style="success" id="button-1669611036351">Submit My Entry</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">How Many Times I've Brewed</h5>
+                  <p class="card-text">I've Brewed 8 Times!</p>
+                  <a href="#" class="btn btn-primary">Go To My Brews</a>
+                </div>
+              </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Number of Herbs Saved In My Cabinet</h5>
+                  <p class="card-text">I've saved 13 herbs in my cabinet!.</p>
+                  <a href="#" class="btn btn-primary">Go To My Cabinet</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

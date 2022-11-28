@@ -442,7 +442,7 @@ font-family: 'Zilla Slab Highlight', cursive;
       ". . ."; 
     margin: auto;
     
-      opacity: 0.4;
+      opacity: 0.9;
       border-radius: 2%;
       background: rgb(107, 30, 207);
 background: radial-gradient(circle, rgb(194, 110, 244) 0%, rgb(112, 0, 43) 100%);
