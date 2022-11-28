@@ -34,11 +34,12 @@ ObjectID = require('mongodb').ObjectID
       const lastEntry = result[0].date
       const firstEntry = result[result.length - 1].date
       console.log(firstEntry, lastEntry)
-  
+      const totalDays = Math.floor(lastEntry.getTime()-firstEntry.getTime()) / (1000*60*60*24)
+  console.log(totalDays)
       if (err) return console.log(err)
       res.render('profile.ejs', {
-        user: req.user
-        
+        user: req.user,
+        totalDays: Math.ceil(totalDays)
       })
     })
   });
@@ -68,7 +69,7 @@ ObjectID = require('mongodb').ObjectID
     console.log(req.body)
     db.collection('journey').insertOne({
       user: req.user.local.email,
-      date: new Date().toLocaleDateString(),
+      date: new Date(),
       mood: req.body.mood,
       energy: req.body.energy,
       usedRemedy: Boolean(req.body.usedRemedy),
