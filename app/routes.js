@@ -27,14 +27,18 @@ ObjectID = require('mongodb').ObjectID
   
 
 
-  // PROFILE SECTION =========================
+  // PROFILE SECTION DASHBOARD PAGE =========================
   // this retrieves the profile route from the ejs file
   app.get('/profile', isLoggedIn, function (req, res) {
-    db.collection('demoDay').find().toArray((err, result) => {
+    db.collection('journey').find().sort({date: -1}).toArray((err, result) => {
+      const lastEntry = result[0].date
+      const firstEntry = result[result.length - 1].date
+      console.log(firstEntry, lastEntry)
+  
       if (err) return console.log(err)
       res.render('profile.ejs', {
-        user: req.user,
-        messages: result
+        user: req.user
+        
       })
     })
   });
@@ -52,7 +56,7 @@ ObjectID = require('mongodb').ObjectID
 
   // HEALING PROGRESS TRACKER ==============================
   app.get('/healingtracker', isLoggedIn, function (req, res) {
-    db.collection('demoDay').find().toArray((err, result) => {
+    db.collection('journey').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('healingtracker.ejs', {
         
@@ -70,6 +74,7 @@ ObjectID = require('mongodb').ObjectID
       usedRemedy: Boolean(req.body.usedRemedy),
       remedy: req.body.remedy,
       notes: req.body.notes
+      
       
 
     }, (err, result) => {
