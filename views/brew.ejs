@@ -81,11 +81,11 @@
           <form action="/post" method="POST">
             <div class="form-group">
               <label for="exampleFormControlInput1">Name Your New Brew!</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name your brew">
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name your brew" name="brewName">
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">Choose A Base</label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="exampleFormControlSelect1" name="base">
                 <option>Standard</option>
                 <option>Citrus</option>
                 <option>Dairy</option>
@@ -93,9 +93,10 @@
                
               </select>
             </div>
+
             <div class="form-group">
               <label for="exampleFormControlSelect2">Choose The Herbs From Your Cabinet</label>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
+              <select multiple class="form-control" id="exampleFormControlSelect2" name="herbSelection">
                 <option>Osha Root</option>
                 <option>Ginger Root</option>
                 <option>Cinnamon</option>
@@ -103,13 +104,17 @@
                 <option>Calendula</option>
               </select>
             </div>
+
             <div class="form-group">
               <label for="exampleFormControlTextarea1">How will you prepare your brew?</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="instructions"></textarea>
             </div>
             <button>Brew Some Magick!</button>
           </form>
         </div>
+
+
+        <!---THIS IS THE AREA WHERE THE RECIPES ARE SAVED ON THE FAR RIGHT-->
         <div class="col savedCol">
           <div class="savedRecipes">
           <div class="list-group">

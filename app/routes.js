@@ -80,6 +80,24 @@ ObjectID = require('mongodb').ObjectID
     })
   });
 
+
+  //FORM POST TO SIDEBAR ON THE RIGHT ===========
+  app.post('/post', (req, res) => {
+    db.collection('brews').insertOne({name: req.body.brewName, base: req.body.base, herbSelection: req.body.herbSelection, instructions: req.body.instructions})
+  res.redirect("/brew")
+  
+  
+  })
+
+
+  //RETRIEVE DATA FROM SAVED DATABASE TO POPULATE IN CHOOSE HERBS OPTION
+
+
+
+
+
+
+
   // HEALING PROGRESS TRACKER ==============================
   app.get('/healingtracker', isLoggedIn, function (req, res) {
     db.collection('journey').find().toArray((err, result) => {
