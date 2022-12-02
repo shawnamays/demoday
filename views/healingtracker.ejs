@@ -4,16 +4,41 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
+    <title>My Healing Journey</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="healingtracker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Progress Page</title>
+    <!--THIS IS THE FONT COLLECTION-->
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hubballi&family=Liu+Jian+Mao+Cao&family=Zilla+Slab+Highlight&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Liu+Jian+Mao+Cao&family=Zilla+Slab+Highlight&display=swap');
+    </style>
+
+    <!--END!!!!!!-->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -25,68 +50,62 @@ POST mood/feeling rating scale 1-10
 POST checkbox next to "used remedy" | "did not use rememdy"
 POST counter with number of times recipes have been made
 POST counter with number of herbs in cabinet currently.  -->
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="/profile">Home</a>
-          <a class="nav-link" href="/apothecary">Apothecary</a>
-          <a class="nav-link" href="/brew">I want to brew</a>
-          <a class="nav-link" href="/healingtracker">Healing Journey</a>
-          <a class="nav-link" href="/logout">Logout</a>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Brew Work</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="/profile">Home</a>
+                    <a class="nav-link" href="/apothecary">Apothecary</a>
+                    <a class="nav-link" href="/brew">I want to brew</a>
+                    <a class="nav-link" href="/healingtracker">Healing Journey</a>
+                    <a class="nav-link" href="/logout">Logout</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
-    <h1>Healing Journey Progress</h1>
+    </nav>
+    <h1 class="healingTitle">Healing Journey Progress</h1>
     <div class="container">
         <div class="row">
             <div class="col-sm">
+
                 <img class="moodTracker"
                     src="https://static.vecteezy.com/system/resources/previews/012/188/656/non_2x/doodle-emoji-loading-bar-hand-drawn-progress-bar-with-upload-status-from-sad-to-happy-emoji-black-on-white-shaded-mood-loading-bar-mood-ratings-isolated-illustration-vector.jpg">
-                <img class="moodTracker"
-                    src="https://static.vecteezy.com/system/resources/previews/012/188/656/non_2x/doodle-emoji-loading-bar-hand-drawn-progress-bar-with-upload-status-from-sad-to-happy-emoji-black-on-white-shaded-mood-loading-bar-mood-ratings-isolated-illustration-vector.jpg">
-                <img class="moodTracker"
-                    src="https://static.vecteezy.com/system/resources/previews/012/188/656/non_2x/doodle-emoji-loading-bar-hand-drawn-progress-bar-with-upload-status-from-sad-to-happy-emoji-black-on-white-shaded-mood-loading-bar-mood-ratings-isolated-illustration-vector.jpg">
+
 
             </div>
             <div class="col-sm">
                 <form method="POST" action="trackJourney">
                     <div class="rendered-form">
                         <div class="">
-                            <h1 id="control-4916268">Today's Progress Entry</h1>
+                            <h1 id="control-4916268">Today's Entry</h1>
                         </div>
                         <div class="formbuilder-radio-group form-group field-radio-group-1669610492667">
                             <label for="radio-group-1669610492667" class="formbuilder-radio-group-label">How's Your
                                 Mood?</label>
                             <div class="radio-group">
                                 <div class="formbuilder-radio">
-                                    <input name="mood"
-                                        id="radio-group-1669610492667-0" value="Happy" type="radio">
+                                    <input name="mood" id="radio-group-1669610492667-0" value="Happy" type="radio">
                                     <label for="radio-group-1669610492667-0">Happy</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="mood"
-                                        id="radio-group-1669610492667-1" value="Sad" type="radio">
+                                    <input name="mood" id="radio-group-1669610492667-1" value="Sad" type="radio">
                                     <label for="radio-group-1669610492667-1">Sad</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="mood"
-                                        id="radio-group-1669610492667-2" value="Angry" type="radio">
+                                    <input name="mood" id="radio-group-1669610492667-2" value="Angry" type="radio">
                                     <label for="radio-group-1669610492667-2">Angry</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="mood"
-                                        id="radio-group-1669610492667-3" type="radio" value="Content">
+                                    <input name="mood" id="radio-group-1669610492667-3" type="radio" value="Content">
                                     <label for="radio-group-1669610492667-3">Content</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="mood"
-                                        id="radio-group-1669610492667-4" type="radio" value="Anxious">
+                                    <input name="mood" id="radio-group-1669610492667-4" type="radio" value="Anxious">
                                     <label for="radio-group-1669610492667-4">Anxious</label>
                                 </div>
                             </div>
@@ -97,38 +116,35 @@ POST counter with number of herbs in cabinet currently.  -->
                                 Energy?</label>
                             <div class="radio-group">
                                 <div class="formbuilder-radio">
-                                    <input name="energy"
-                                        id="radio-group-1669610888258-0" value="tired" type="radio">
+                                    <input name="energy" id="radio-group-1669610888258-0" value="tired" type="radio">
                                     <label for="radio-group-1669610888258-0">Tired</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="energy"
-                                        id="radio-group-1669610888258-1" value="very tired" type="radio">
+                                    <input name="energy" id="radio-group-1669610888258-1" value="very tired"
+                                        type="radio">
                                     <label for="radio-group-1669610888258-1">Very Tired</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="energy" 
-                                        id="radio-group-1669610888258-2" value="Can't Even Get Out Of Bed" type="radio">
+                                    <input name="energy" id="radio-group-1669610888258-2"
+                                        value="Can't Even Get Out Of Bed" type="radio">
                                     <label for="radio-group-1669610888258-2">Can't Even Get Out Of Bed</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="energy" 
-                                        id="radio-group-1669610888258-3" type="radio" value="Content">
+                                    <input name="energy" id="radio-group-1669610888258-3" type="radio" value="Content">
                                     <label for="radio-group-1669610888258-3">Content</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="energy" 
-                                        id="radio-group-1669610888258-4" type="radio" value="Perked Up">
+                                    <input name="energy" id="radio-group-1669610888258-4" type="radio"
+                                        value="Perked Up">
                                     <label for="radio-group-1669610888258-4">Perked Up</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="energy" 
-                                        id="radio-group-1669610888258-5" type="radio" value="Wicked Excited">
+                                    <input name="energy" id="radio-group-1669610888258-5" type="radio"
+                                        value="Wicked Excited">
                                     <label for="radio-group-1669610888258-5">Wicked Excited</label>
                                 </div>
                                 <div class="formbuilder-radio">
-                                    <input name="energy" 
-                                        id="radio-group-1669610888258-6" type="radio" value="Manic">
+                                    <input name="energy" id="radio-group-1669610888258-6" type="radio" value="Manic">
                                     <label for="radio-group-1669610888258-6">Manic</label>
                                 </div>
                             </div>
@@ -138,13 +154,13 @@ POST counter with number of herbs in cabinet currently.  -->
                                 Use A Remedy?</label>
                             <div class="checkbox-group">
                                 <div class="formbuilder-checkbox">
-                                    <input name="usedRemedy" id="checkbox-group-1669610634456-0"
-                                        value="true" type="radio">
+                                    <input name="usedRemedy" id="checkbox-group-1669610634456-0" value="true"
+                                        type="radio">
                                     <label for="checkbox-group-1669610634456-0">Yes</label>
                                 </div>
                                 <div class="formbuilder-checkbox">
-                                    <input name="usedRemedy" value="false"
-                                        id="checkbox-group-1669610634456-1" type="radio">
+                                    <input name="usedRemedy" value="false" id="checkbox-group-1669610634456-1"
+                                        type="radio">
                                     <label for="checkbox-group-1669610634456-1">No</label>
                                 </div>
                             </div>
@@ -162,27 +178,30 @@ POST counter with number of herbs in cabinet currently.  -->
                                 id="textarea-1669611009422"></textarea>
                         </div>
                         <div class="formbuilder-button form-group field-button-1669611036351">
-                            <button type="submit" class="btn-success btn" id="button-1669611036351">Submit My Entry</button>
+                            <button type="submit" class="btn-success btn" id="button-1669611036351">Submit My
+                                Entry</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="col-sm">
                 <div class="card" style="width: 18rem">
-                    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                    <img class="card-img-top" src="https://www.tableau.com/sites/default/files/2021-06/DataGlossary_Icons_Pie%20Chart.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">How Many Times I've Brewed</h5>
-                        <p class="card-text">I've Brewed 8 Times!</p>
-                        <a href="#" class="btn btn-primary">Go To My Brews</a>
+                        <p class="card-text">I've Brewed 8 Times! 6 Remedies Have Worked.</p>
+                        <a href="/brew" class="btn btn-primary">Go To My Brews</a>
                     </div>
                 </div>
                 <br>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                    <img class="card-img-top" src="https://allusesof.com/wp-content/uploads/2020/04/041720_2318_10UsesofBar1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Number of Herbs Saved In My Cabinet</h5>
-                        <p class="card-text">I've saved 13 herbs in my cabinet!.</p>
-                        <a href="#" class="btn btn-primary">Go To My Cabinet</a>
+                        <p class="card-text">I've saved 13 herbs in my cabinet!
+                            I've discovered 5 new herbs during foraging!
+                        </p>
+                        <a href="/apothecary" class="btn btn-primary">Go To My Cabinet</a>
                     </div>
                 </div>
             </div>

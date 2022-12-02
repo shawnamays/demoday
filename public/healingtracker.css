@@ -1,5 +1,25 @@
 /* THIS IS THE STYLESHEET FOR THE CSS TRACKER */
+/*
 
+font-family: 'Hubballi', cursive;
+font-family: 'Liu Jian Mao Cao', cursive;
+font-family: 'Zilla Slab Highlight', cursive;
+font-family: 'Megrim', cursive;
+*/
 .moodTracker {
  width: 300px;
+}
+
+body {
+    font-family: 'Megrim', cursive;
+    background-color: #d79922;
+}
+
+.healingTitle {
+    font-size: 80px;
+    font-family: 'Megrim', cursive;
+    margin-left: 15%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+
 }

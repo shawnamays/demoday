@@ -44,6 +44,9 @@ ObjectID = require('mongodb').ObjectID
     })
   });
 
+  ///this is RETREIEVING THE SAVED RECIPES
+  
+
 
   // THIS IS GOING TO SHOW A PROGRESS BAR OF THE MONTHLY HEALING PROGRESS ==========
 //   db.collection('journey').find().sort({date: -1}).toArray((err, result) => {
@@ -95,12 +98,34 @@ ObjectID = require('mongodb').ObjectID
   })
 
 
-  //RETRIEVE DATA FROM SAVED DATABASE TO POPULATE IN CHOOSE HERBS OPTION
+  //RETRIEVE DATA FROM SAVED DATABASE TO POPULATE IN CHOOSE HERBS OPTION===============================
 
+  // app.get('/apothecary', isLoggedIn, function (req, res) {
+  //   db.collection('herbs').find().toArray((err, result) => {
+  //     if (err) return console.log(err)
+  //     res.render('apothecary.ejs', {
+  //       herbs: result
+  //     })
+  //   })
+  // });
 
-
-
-
+  // app.put('/update', isLoggedIn, (req, res) => {
+   
+  //   db.collection('herbs').findOneAndUpdate({
+  //   _id: ObjectID(req.body.id)
+  
+  //   }, {
+  //     $addToSet: {
+  //       herb: req.body.herb
+  //     }
+  //   }, {
+  //     sort: { _id: -1 },
+  //     upsert: true
+  //   }, (err, result) => {
+  //     if (err) return res.send(err)
+  //     res.send(result)
+  //   })
+  // })
 
 
   // HEALING PROGRESS TRACKER ==============================
