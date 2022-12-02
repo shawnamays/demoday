@@ -1,11 +1,24 @@
 /* THIS IS THE PAGE WHERE THE HERBS ARE SELECTED/FORAGED AND ADDED TO FAVORITES.  WHEN SAVED, THEY GO INTO THE CABINET */
 
+/* CSS FAMILIES
 
+font-family: 'Hubballi', cursive;
+font-family: 'Liu Jian Mao Cao', cursive;
+font-family: 'Zilla Slab Highlight', cursive;
+
+•/
 
 /* Add a gray background color and some padding to the footer */
 footer {
   background-color: #f2f2f2;
   padding: 25px;
+}
+
+.theFont {
+  font-family: 'Liu Jian Mao Cao', cursive;
+  
+font-size: 30px;
+ 
 }
 
 body {
@@ -63,6 +76,9 @@ margin-bottom: 5%;
 
 .headTitle {
   font-family: 'Megrim', cursive;
+  margin-left: 35%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 
 }
 
@@ -80,6 +96,10 @@ margin-bottom: 5%;
   .addToCabinet {
     text-decoration: none;
     
+  }
+
+  .card-text{
+    font-size: 20px;
   }
 
   .addToCabinet a {
