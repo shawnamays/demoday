@@ -8,13 +8,70 @@ footer {
   padding: 25px;
 }
 
-
-
-.forageTitle {
-text-align: center;
+body {
+  background-color: #d79922
 }
 
+.card {
+  background-color: #EFE2BA
+}
 
+.titleFonts {
+font-size: 80px;
+  font-family: 'Megrim', cursive;
+
+}
+
+.foragingBox {
+
+  display: flex;
+  flex-direction: column;
+ 
+  
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.addButton {
+margin-left: 5%;
+}
+
+.theInputs {
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-left: 15%;
+  
+}
+
+.theInputs input {
+  margin-bottom: 10%;
+ 
+}
+.container {
+  font-family: 'Megrim', cursive;
+ 
+
+}
+.forageTitle {
+text-align: center;
+font-family: 'Megrim', cursive;
+margin-bottom: 5%;
+
+}
+
+.headTitle {
+  font-family: 'Megrim', cursive;
+
+}
+
+.herbDiscoveryTitle {
+
+  font-family: 'Megrim', cursive;
+  margin-top: 10%;
+
+}
 
 .checked {
     color: orange;
