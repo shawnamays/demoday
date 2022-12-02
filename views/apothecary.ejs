@@ -19,6 +19,24 @@
 ///// Apothecary cabinet (multiple parts) (added to bottom of ^^ foraging page) -
 Users can open the cabinet and see their herbs displayed.  When they CLICK on the herb, the corresponding recipes you have created from that herb category will show up that you've already stored (i.e: you click on "lavender" and are shown "lavender rose tea", "lavender honey", "lavender aromatherapy smudge stick"). -->
 
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/profile">Home</a>
+        <a class="nav-link" href="/apothecary">Apothecary</a>
+        <a class="nav-link" href="/brew">I want to brew</a>
+        <a class="nav-link" href="/healingtracker">Healing Journey</a>
+        <a class="nav-link" href="/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
 <div class="jumbotron">
   <div class="container text-center">
     <h1>My Apothecary Cabinet</h1>      
@@ -26,13 +44,21 @@ Users can open the cabinet and see their herbs displayed.  When they CLICK on th
   </div>
 </div>
 
-
-<div class="foragingBox">
 <h1 class="forageTitle">Forage Something New!</h1>
-<div data-tf-widget="XmyCyzN2" data-tf-opacity="100" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js"></script>
-  <form>
-<h2>What Did You Discover Today?</h2>
-    <input type="text" placeholder="name of herb">
+ 
+<div class="foragingBox">
+  <button data-tf-popup="XmyCyzN2" data-tf-size="100" data-tf-iframe-props="title=Interactive Fiction (copy)" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#614E38;color:#FFFFFF;font-size:31px;border-radius:38px;padding:0 51px;font-weight:bold;height:77.5px;cursor:pointer;line-height:77.5px;text-align:center;margin:0;text-decoration:none;">Forage A New Remedy!</button><script src="//embed.typeform.com/next/embed.js"></script>
+
+
+
+  <form action="/post" method="POST">
+<h2>What new herb did you discover today?</h2>
+<!---THIS NEEDS TO BE A POST REQUEST THAT SENDS THE RESULT TO WHERE THE
+HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
+    <input type="text" placeholder="name of ingredient" name="addANewHerb">
+    <input type="text" placeholder="tastes like" name="taste">
+    <input type="text" placeholder="pairs well with" name="pairsWith">
+    <input type="text" placeholder="medicinal benefits" name="medicinalBenefits">
     <button>Add To My Cabinet!</button>
   </form>
 </div>

@@ -1,28 +1,6 @@
 /* THIS IS THE PAGE WHERE THE HERBS ARE SELECTED/FORAGED AND ADDED TO FAVORITES.  WHEN SAVED, THEY GO INTO THE CABINET */
 
-/* Remove the navbar's default rounded borders and increase the bottom margin */ 
-.navbar {
-  margin-bottom: 50px;
-  border-radius: 0;
-}
 
-/* Remove the jumbotron's default bottom margin */ 
- .jumbotron {
-  margin-bottom: 0;
-}
-
-.carousel-inner img {
-  width: 100%; /* Set width to 100% */
-  margin: auto;
-  min-height:200px;
-}
-
-/* Hide the carousel text when the screen is less than 600 pixels wide */
-@media (max-width: 600px) {
-.carousel-caption {
-  display: none; 
-}
-}
 
 /* Add a gray background color and some padding to the footer */
 footer {

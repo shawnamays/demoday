@@ -45,6 +45,31 @@ ObjectID = require('mongodb').ObjectID
   });
 
 
+  // THIS IS GOING TO SHOW A PROGRESS BAR OF THE MONTHLY HEALING PROGRESS ==========
+//   db.collection('journey').find().sort({date: -1}).toArray((err, result) => {
+//     const lastEntry = result[0].date
+//     const firstEntry = result[result.length - 1].date
+//     console.log(firstEntry, lastEntry)
+//     const totalDays = Math.floor(lastEntry.getTime()-firstEntry.getTime()) / (1000*60*60*24)
+// console.log(totalDays)
+//     if (err) return console.log(err)
+//     res.render('profile.ejs', {
+//       user: req.user,
+//       totalDays: Math.ceil(totalDays)
+//     })
+//   })
+// });
+
+
+// THIS IS GOING TO BE A NUMBER THAT COUNTS SAVED RECIPES
+
+
+// THIS IS GOING TO BE A NUMBER THAT SHOWS A NUMBER OF SAVED HERBS
+
+
+// THIS IS GOING TO BE A NUMBER THAT SHOWS HOW MANY TIMES USER HAS BREWED A REMEDY
+
+
   //I WANT TO BREW ===================================
   app.get('/brew', isLoggedIn, function (req, res) {
     db.collection('demoDay').find().toArray((err, result) => {
@@ -125,19 +150,28 @@ ObjectID = require('mongodb').ObjectID
   })
 });
 
-
+// POSTING AN HER FROM THE FROM INTO THE CABINET
 
 app.post('/post', (req, res) => {
-    db.collection('myCabinet').save({
-      herb: [req.body.herb],
+  db.collection('herbs').insertOne({name: req.body.addANewHerb, taste: req.body.taste, pairsWith: req.body.pairsWith, medicinalBenefits: req.body.medicinalBenefits})
+res.redirect("/apothecary")
+
+
+})
+
+
+
+// app.post('/post', (req, res) => {
+//     db.collection('herbs').find().toArray({
+//       herb: [req.body.herb],
       
 
-    }, (err, result) => {
-      if (err) return console.log(err)
-      console.log('saved to database')
+//     }, (err, result) => {
+//       if (err) return console.log(err)
+//       console.log('saved to database')
     
-    })
-  })
+//     })
+//   })
 
 
 
