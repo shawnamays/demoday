@@ -139,7 +139,7 @@
 
         <div class="savedRecipes">
           <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
               <div class="d-flex w-100 justify-content-between">
                 <!--THE TITLE OF THE RECIPE IS DISPLAYED HERE-->
                 
@@ -148,41 +148,32 @@
                 <!--THE DATE OF POSTING IS GOING TO GO HERE-->
                 <small>1 day ago</small>
               </div>
+
+  
               <!--THE RECIPE SNIPPET WILL BE DISPLAYED HERE-->
-              <p class="mb-1">
-                <%= data.base %>
-                <%= data.herbSelection %>
-                <%= data.instructions %>
+              <p class="recipeDescrip">
+                
+                Required Ingredients:  <%= data.herbSelection %>
+                <br>
+                Instructions & Use:
+                <br><%= data.instructions %>
               
               </p>
-              <small>Donec id elit non mi porta.</small>
+              <small><p>Base:<%= data.base %></p></small>
+              <br>
             </a>
 
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
               <div class="d-flex w-100 justify-content-between">
 
                 <!--THE TITLE OF THE RECIPE IS DISPLAYED HERE-->
-                <h5 class="recipeTitle">Headache Relief Tonic</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-
-              <!--THE RECIPE SNIPPET WILL BE DISPLAYED HERE-->
-              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                blandit.</p>
-              <small class="text-muted">Donec id elit non mi porta.</small>
+               
             </a>
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
               <div class="d-flex w-100 justify-content-between">
 
                 <!--THE TITLE OF THE RECIPE IS DISPLAYED HERE-->
-                <h5 class="recipeTitle">Pain Relief Tincture</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-
-              <!--THE RECIPE SNIPPET WILL BE DISPLAYED HERE-->
-              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                blandit.</p>
-              <small class="text-muted">Donec id elit non mi porta.</small>
+                
             </a>
           </div>
         </div>

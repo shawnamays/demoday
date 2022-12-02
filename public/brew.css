@@ -31,9 +31,24 @@ body {
 }
 
 .savedRecipes {
- 
-  background-color: #d79922;
+ border: 2px solid red;
+
 }
+
+.recipeTitle {
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 40px;
+}
+.recipeDescrip {
+  font-family: 'Hubballi', cursive;
+  font-size: 25px;
+
+
+}
+
+
+
+
 
 .basesCategories li {
   background-color: #4056a1;
