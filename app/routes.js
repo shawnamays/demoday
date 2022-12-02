@@ -72,16 +72,21 @@ ObjectID = require('mongodb').ObjectID
 
   //I WANT TO BREW ===================================
   app.get('/brew', isLoggedIn, function (req, res) {
-    db.collection('demoDay').find().toArray((err, result) => {
+    db.collection('brews').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('brew.ejs', {
-        
+        brews: result
       })
     })
   });
+ 
 
 
   //FORM POST TO SIDEBAR ON THE RIGHT ===========
+
+
+
+
   app.post('/post', (req, res) => {
     db.collection('brews').insertOne({name: req.body.brewName, base: req.body.base, herbSelection: req.body.herbSelection, instructions: req.body.instructions})
   res.redirect("/brew")
@@ -168,7 +173,7 @@ ObjectID = require('mongodb').ObjectID
   })
 });
 
-// POSTING AN HER FROM THE FROM INTO THE CABINET
+// POSTING AN HERB FROM THE FROM INTO THE CABINET
 
 app.post('/post', (req, res) => {
   db.collection('herbs').insertOne({name: req.body.addANewHerb, taste: req.body.taste, pairsWith: req.body.pairsWith, medicinalBenefits: req.body.medicinalBenefits})

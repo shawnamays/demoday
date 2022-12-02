@@ -133,18 +133,28 @@
 
       <!---THIS IS THE AREA WHERE THE RECIPES ARE SAVED ON THE FAR RIGHT-->
       <div class="col savedCol">
+
+        <% if (brews) { %>
+        <% brews.forEach(data=> { %>
+
         <div class="savedRecipes">
           <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
               <div class="d-flex w-100 justify-content-between">
                 <!--THE TITLE OF THE RECIPE IS DISPLAYED HERE-->
-                <h5 class="recipeTitle">Nausea Remedy Tea</h5>
+                
+                
+                <h5 class="recipeTitle"><%= data.name %></h5>
                 <!--THE DATE OF POSTING IS GOING TO GO HERE-->
                 <small>1 day ago</small>
               </div>
               <!--THE RECIPE SNIPPET WILL BE DISPLAYED HERE-->
-              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                blandit.</p>
+              <p class="mb-1">
+                <%= data.base %>
+                <%= data.herbSelection %>
+                <%= data.instructions %>
+              
+              </p>
               <small>Donec id elit non mi porta.</small>
             </a>
 
@@ -176,6 +186,9 @@
             </a>
           </div>
         </div>
+
+        <% } ) %>
+        <% } %>
       </div>
     </div>
   </div>
