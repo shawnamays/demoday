@@ -1,14 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <title>Brewing Cauldron</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="brew.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <!--THIS IS THE FONT COLLECTION-->
+  
+  
+    <style> @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap'); </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Liu+Jian+Mao+Cao&family=Zilla+Slab+Highlight&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Liu+Jian+Mao+Cao&family=Zilla+Slab+Highlight&display=swap'); </style>
+  
+    <!--END!!!!!!-->
+  
+  
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
@@ -28,16 +42,19 @@
         </div>
       </div>
     </nav>
+<h1 class="cauldronTitle">Brewing Cauldron</h1>
+<img class="brewingHeader" src="https://i.ibb.co/FJpm992/Brown-Simple-Ethnic-Tribal-Logo.png">
+   
 
-    
+<!--AREA WHERE THE BASES ARE SELECTED ON THE FAR LEFT OF THE PAGE-->
     <div class="container text-center">
       <div class="row">
-        <div class="col">
-          <div class="card" style="width: 18rem;">
+        <div class="col basesColumn">
+          <div class="card basesSection" style="width: 18rem;">
             <div class="card-header">
               Bases To Start With
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush basesCategories">
               <li class="list-group-item">Standard Base
                <br>
                description
@@ -57,17 +74,11 @@
             </ul>
           </div>
         </div>
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+        <div class="col createBrewCol">
+          
 
-          <form>
+          <!--THIS IS THE START OF THE RECIPE FORM TO ADD A NEW BREW-->
+          <form action="/post" method="POST">
             <div class="form-group">
               <label for="exampleFormControlInput1">Name Your New Brew!</label>
               <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name your brew">
@@ -99,7 +110,8 @@
             <button>Brew Some Magick!</button>
           </form>
         </div>
-        <div class="col">
+        <div class="col savedCol">
+          <div class="savedRecipes">
           <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
               <div class="d-flex w-100 justify-content-between">
@@ -127,6 +139,7 @@
             </a>
           </div>
         </div>
+      </div>
       </div>
     </div>
 

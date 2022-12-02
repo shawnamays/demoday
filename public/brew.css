@@ -1,6 +1,68 @@
-/* THIS IS THE STYLESHEET FOR THE I WANT TO BREW PAGE */
+/* THIS IS THE STYLESHEET FOR THE I WANT TO BREW PAGE 
 
+ CSS FAMILIES
 
+font-family: 'Hubballi', cursive;
+font-family: 'Liu Jian Mao Cao', cursive;
+font-family: 'Zilla Slab Highlight', cursive;
+font-family: 'Megrim', cursive;
+
+*/
+
+body {
+  background-color: #d79922;
+  padding-left: 2%;
+  padding-right: 2%;
+  
+}
+
+.basesColumn {
+  margin-right: -15%;
+  width: 33.3%;
+  
+}
+.createBrewCol {
+  width: 33.3%;
+}
+
+.savedCol {
+
+  width: 33.3%;
+}
+
+.savedRecipes {
+  border: 2px solid red;
+  background-color: #d79922;
+}
+
+.basesCategories li {
+  background-color: #4056a1;
+  color: #f1f1f1;
+  font-size: 20px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+
+}
+
+.basesSection {
+  background-color: #195128;
+  color:#d79922;
+  font-size: 30px;
+  font-family: 'Megrim', cursive;
+}
+
+.col {
+  margin-top: 6%;
+  margin-bottom: 20%;
+
+}
+.cauldronTitle {
+  font-family: 'Megrim', cursive;
+  font-size: 80px;
+  margin-left: 26%;
+}
+.brewingHeader {
+  margin-left: 31%;
+}
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
     .row.content {height: 1500px}
     
