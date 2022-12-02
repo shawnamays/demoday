@@ -73,19 +73,20 @@
           <ul class="list-group list-group-flush basesCategories">
             <li class="list-group-item">Standard Base
               <br>
-              description
+             <p class="baseOption">hot water</p> 
             </li>
             <li class="list-group-item">Citrus Base
               <br>
-              description
+              <p class="baseOption">hot water | fresh lemon | apple cider vinegar
+              </p> 
             </li>
             <li class="list-group-item">Dairy Base
               <br>
-              description
+              <p class="baseOption">hot milk | hot water</p> 
             </li>
             <li class="list-group-item">Spiced Base
               <br>
-              description
+              <p class="baseOption">hot milk | hot water | chai concentrate</p> 
             </li>
           </ul>
         </div>
@@ -94,14 +95,14 @@
 
 
         <!--THIS IS THE START OF THE RECIPE FORM TO ADD A NEW BREW-->
-        <form action="/post" method="POST">
+        <form action="/newRemedies" method="POST">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Name Your New Brew!</label>
+            <label for="exampleFormControlInput1">Name Your New Brew Remedy</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name your brew"
               name="brewName">
           </div>
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Choose A Base</label>
+            <label for="exampleFormControlSelect1">Choose A Base To Start With</label>
             <select class="form-control" id="exampleFormControlSelect1" name="base">
               <option>Standard</option>
               <option>Citrus</option>
@@ -112,7 +113,7 @@
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlSelect2">Choose The Herbs From Your Cabinet</label>
+            <label for="exampleFormControlSelect2">Pick The Key Ingredients From Your Apothecary</label>
             <select multiple class="form-control" id="exampleFormControlSelect2" name="herbSelection">
               <option>Osha Root</option>
               <option>Ginger Root</option>
@@ -124,9 +125,9 @@
 
           <div class="form-group">
             <label for="exampleFormControlTextarea1">How will you prepare your brew?</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="instructions"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="instructions" placeholder="You can write anything, don't forget to include the medicinal purpose!"></textarea>
           </div>
-          <button>Brew Some Magick!</button>
+          <button>Brew Something New</button>
         </form>
       </div>
 

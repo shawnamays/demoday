@@ -87,7 +87,7 @@ ObjectID = require('mongodb').ObjectID
 
 
 
-  app.post('/post', (req, res) => {
+  app.post('/newRemedies', (req, res) => {
     db.collection('brews').insertOne({name: req.body.brewName, base: req.body.base, herbSelection: req.body.herbSelection, instructions: req.body.instructions})
   res.redirect("/brew")
   

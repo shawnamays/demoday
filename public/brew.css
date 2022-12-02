@@ -16,9 +16,24 @@ body {
   
 }
 
+.savedRecipes {
+  background-color: #d79922;
+ 
+ }
+
+
+.baseOption {
+
+  font-family: 'Zilla Slab Highlight', cursive;
+ }
+
+ .baseTitle{
+  
+ }
+
 .basesColumn {
   margin-right: -15%;
-  width: 33.3%;
+  
   
 }
 .createBrewCol {
@@ -30,10 +45,7 @@ body {
   width: 33.3%;
 }
 
-.savedRecipes {
- border: 2px solid red;
 
-}
 
 .recipeTitle {
   font-family: 'Liu Jian Mao Cao', cursive;
@@ -48,12 +60,10 @@ body {
 
 
 
-
-
 .basesCategories li {
   background-color: #4056a1;
   color: #f1f1f1;
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Liu Jian Mao Cao', cursive;
 
 }
