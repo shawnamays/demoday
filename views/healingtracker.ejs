@@ -68,13 +68,25 @@ POST counter with number of herbs in cabinet currently.  -->
             </div>
         </div>
     </nav>
+
+
+
     <h1 class="healingTitle">Healing Journey Progress</h1>
     <div class="container">
         <div class="row">
-            <div class="col-sm">
 
-                <img class="moodTracker"
-                    src="https://static.vecteezy.com/system/resources/previews/012/188/656/non_2x/doodle-emoji-loading-bar-hand-drawn-progress-bar-with-upload-status-from-sad-to-happy-emoji-black-on-white-shaded-mood-loading-bar-mood-ratings-isolated-illustration-vector.jpg">
+            
+            <div class="col-sm journalEntryContainer">
+                <!---THIS IS THE LEFT SIDE COLUMN OF THE PAGE WHERE THE JOURNAL ENTRY SNIPPETS ARE DISPLAYED-->
+               <% for (let i=0; i < moods.length; i++) { %>
+                <p><p class="journalTitle">Date of Entry:</p> <%= moods[i].date %></p>
+                <p><p class="journalTitle">Remedy Used?</p> <%= moods[i].usedRemedy %></p>
+                <p><p class="journalTitle">What Remedy Was Used?</p> <%= moods[i].remedy %></p>
+                <p><p class="journalTitle">Notes:</p> <%= moods[i].notes %></p>
+
+               <% } %>
+
+                
 
 
             </div>

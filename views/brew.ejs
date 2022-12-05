@@ -106,10 +106,10 @@
             
             <label for="exampleFormControlSelect1">Choose A Base To Start With</label>
             <select class="form-control" id="exampleFormControlSelect1" name="base">
-              <option>Standard</option>
-              <option>Citrus</option>
-              <option>Dairy</option>
-              <option>Spiced</option>
+              <option value="standard">Standard</option>
+              <option value="citrus">Citrus</option>
+              <option value="dairy">Dairy</option>
+              <option value="spiced">Spiced</option>
 
             </select>
           </div>
@@ -118,12 +118,12 @@
             
             <label for="exampleFormControlSelect2">Pick The Key Ingredients From Your Apothecary</label>
             <select multiple class="form-control" id="exampleFormControlSelect2" name="herbSelection">
-              
-              <option>Osha Root</option>
-              <option>Ginger Root</option>
-              <option>Cinnamon</option>
-              <option>Rosemary</option>
-              <option>Calendula</option>
+           <% for (let i = 0; i < herbs.length; i++) { %>
+            <option value="<%= herbs[i].name %>"><%= herbs[i].name %></option>
+
+           <% } %>
+           
+            
             </select>
           </div>
 
@@ -131,7 +131,7 @@
             <label for="exampleFormControlTextarea1">How will you prepare your brew?</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="instructions" placeholder="You can write anything, don't forget to include the medicinal purpose!"></textarea>
           </div>
-          <button>Brew Something New</button>
+          <button type="submit">Brew Something New</button>
         </form>
       </div>
 

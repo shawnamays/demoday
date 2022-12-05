@@ -64,20 +64,20 @@ Users can open the cabinet and see their herbs displayed.  When they CLICK on th
 
 
 
-  <form action="/post" method="POST">
+  <!-- <form action="/post" method="POST"> -->
 <h2 class="herbDiscoveryTitle">What new herb did you discover today?</h2>
 <!---THIS NEEDS TO BE A POST REQUEST THAT SENDS THE RESULT TO WHERE THE
 HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
 
 
 <div class="theInputs">
-    <input type="text" placeholder="name of ingredient" name="addANewHerb">
-    <input type="text" placeholder="tastes like" name="taste">
-    <input type="text" placeholder="pairs well with" name="pairsWith">
-    <input type="text" placeholder="medicinal benefits" name="medicinalBenefits">
+    <input type="text" placeholder="name of ingredient" name="addANewHerb" class="ingredientName">
+    <input type="text" placeholder="tastes like" name="taste" class="taste">
+    <input type="text" placeholder="pairs well with" name="pairsWith" class="pair">
+    <input type="text" placeholder="medicinal benefits" name="medicinalBenefits" class="benefits">
     <button class="addButton">Add To My Cabinet!</button>
   </div>
-  </form>
+  <!-- </form> -->
 </div>
 </div>
 
@@ -97,7 +97,7 @@ HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
         <div class="card-header text-center theFont">
           <%= data.name %>
         </div>
-        <img src="https://via.placeholder.com/288" class="card-img-top p-2" alt="...">
+        <img src="<%= data.url %>" class="card-img-top p-2" alt="...">
         <div class="card-body">
           <p class="card-text">
             <p class="card-text">Tastes Like: <%= data.taste %></p>    
@@ -122,6 +122,6 @@ HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
   
 
 
-
+<script src="apothecary.js"></script>
 </body>
 </html>

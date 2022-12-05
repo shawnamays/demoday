@@ -2,72 +2,96 @@
 // var thumbDown = document.getElementsByClassName("fa-thumbs-down");
 // var trash = document.getElementsByClassName("fa-trash-o");
 
-var trash = document.getElementsByClassName("fa-trash-o");
-var love = document.getElementsByClassName("fa-heart-o");
 
-// favorite button is under the class "favorite"
+// createPost: async (req, res) => {
+//   try {
+//     // Upload image to cloudinary
+//     const result = await cloudinary.uploader.upload(req.file.path);
 
-Array.from(love).forEach(function(element) {
-          element.addEventListener('click', function(){
+//     await Post.create({
+//       title: req.body.title,
+//       image: result.secure_url,
+//       cloudinaryId: result.public_id,
+//       caption: req.body.caption,
+//       likes: 0,
+//       user: req.user.id,
+//       comment: req.body.comment
+//     });
+//     console.log("Post has been added!");
+//     res.redirect("/profile");
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+// var trash = document.getElementsByClassName("fa-trash-o");
+// var love = document.getElementsByClassName("fa-heart-o");
+
+// // favorite button is under the class "favorite"
+
+// Array.from(love).forEach(function(element) {
+//           element.addEventListener('click', function(){
           
-          const herb = this.parentNode.parentNode.childNodes[1].innerText
+//           const herb = this.parentNode.parentNode.childNodes[1].innerText
            
-            // FETCH REQUEST IS HERE ------------------------
-            fetch('post', {
+//             // FETCH REQUEST IS HERE ------------------------
+//             fetch('post', {
               
-              method: 'post',
-              headers: {'Content-Type': 'application/json'},
-              body: JSON.stringify({
-                herb
-              })
-            })
-            .then(response => {
-              if (response.ok) return response.json()
-            })
-            .then(data => {
-              console.log(data)
-              //reloading the page after every thumbs up
-              window.location.reload(true)
-            })
-          });
-    });
+//               method: 'post',
+//               headers: {'Content-Type': 'application/json'},
+//               body: JSON.stringify({
+//                 herb
+//               })
+//             })
+//             .then(response => {
+//               if (response.ok) return response.json()
+//             })
+//             .then(data => {
+//               console.log(data)
+//               //reloading the page after every thumbs up
+//               window.location.reload(true)
+//             })
+//           });
+//     });
 
 
-    Array.from(trash).forEach(function(element) {
-      element.addEventListener('click', function(){
-        const herb = this.parentNode.parentNode.childNodes[1].innerText
+//     Array.from(trash).forEach(function(element) {
+//       element.addEventListener('click', function(){
+//         const herb = this.parentNode.parentNode.childNodes[1].innerText
 
-        fetch('myCabinet', {
-          method: 'delete',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            herb
-          })
-        }).then(function (response) {
-          window.location.reload(true)
-        })
-      });
-});
-
-function updatemenu() {
-  if (document.getElementById('responsive-menu').checked == true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0';
-    document.getElementById('menu').style.borderBottomLeftRadius = '0';
-  }else{
-    document.getElementById('menu').style.borderRadius = '10px';
-  }
-}
+//         fetch('myCabinet', {
+//           method: 'delete',
+//           headers: {
+//             'Content-Type': 'application/json'
+//           },
+//           body: JSON.stringify({
+//             herb
+//           })
+//         }).then(function (response) {
+//           window.location.reload(true)
+//         })
+//       });
+// });
 
 
-(function ($) {
-  $(function () {
+
+
+// function updatemenu() {
+//   if (document.getElementById('responsive-menu').checked == true) {
+//     document.getElementById('menu').style.borderBottomRightRadius = '0';
+//     document.getElementById('menu').style.borderBottomLeftRadius = '0';
+//   }else{
+//     document.getElementById('menu').style.borderRadius = '10px';
+//   }
+// }
+
+
+// (function ($) {
+//   $(function () {
 
     
 
-  });
-})(jQuery);
+//   });
+// })(jQuery);
 
 
 
@@ -98,49 +122,49 @@ function updatemenu() {
 //           });
 //     });
 
-    function edit(id){
-        let herb = prompt("add to cabinet")
+    // function edit(id){
+    //     let herb = prompt("add to cabinet")
         
       
-        fetch('/update', {
-          method: 'put',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            id,
-           herb
+    //     fetch('/update', {
+    //       method: 'put',
+    //       headers: {
+    //         'Content-Type': 'application/json'
+    //       },
+    //       body: JSON.stringify({
+    //         id,
+    //        herb
           
-          })
-        }).then(function (response) {
-          window.location.reload()
-        })
+    //       })
+    //     }).then(function (response) {
+    //       window.location.reload()
+    //     })
       
       
       
-      }
+    //   }
 
 
-      function deleteOption(id){
+    //   function deleteOption(id){
   
         
       
-        fetch('/delete', {
-          method: 'delete',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            id
+    //     fetch('/delete', {
+    //       method: 'delete',
+    //       headers: {
+    //         'Content-Type': 'application/json'
+    //       },
+    //       body: JSON.stringify({
+    //         id
           
-          })
-        }).then(function (response) {
-          window.location.reload()
-        })
+    //       })
+    //     }).then(function (response) {
+    //       window.location.reload()
+    //     })
       
       
       
-      }
+    //   }
       
 
 // Array.from(thumbUp).forEach(function(element) {

@@ -30,6 +30,8 @@ ObjectID = require('mongodb').ObjectID
   // PROFILE SECTION DASHBOARD PAGE =========================
   // this retrieves the profile route from the ejs file
   app.get('/profile', isLoggedIn, function (req, res) {
+    db.collection('brews').find().toArray((err, brews) => {
+    db.collection('herbs').find().toArray((err, herbs) => {
     db.collection('journey').find().sort({date: -1}).toArray((err, result) => {
       const lastEntry = result[0].date
       const firstEntry = result[result.length - 1].date
@@ -39,10 +41,19 @@ ObjectID = require('mongodb').ObjectID
       if (err) return console.log(err)
       res.render('profile.ejs', {
         user: req.user,
-        totalDays: Math.ceil(totalDays)
+        totalDays: Math.ceil(totalDays),
+        herbs,
+        brews
       })
     })
+  })
+    })
   });
+
+
+// ======= THIS IS GOING TO BE A NUMBER THAT SHOWS A NUMBER OF SAVED HERBS IN MY CABINET
+
+
 
   ///this is RETREIEVING THE SAVED RECIPES
   
@@ -67,19 +78,67 @@ ObjectID = require('mongodb').ObjectID
 // THIS IS GOING TO BE A NUMBER THAT COUNTS SAVED RECIPES
 
 
-// THIS IS GOING TO BE A NUMBER THAT SHOWS A NUMBER OF SAVED HERBS
 
+//==============================================================================================
 
 // THIS IS GOING TO BE A NUMBER THAT SHOWS HOW MANY TIMES USER HAS BREWED A REMEDY
 
 
+
+
+
+ //APOTHECARY CABINET ============
+
+
+ app.get('/apothecary', isLoggedIn, function (req, res) {
+  db.collection('herbs').find().toArray((err, result) => {
+    if (err) return console.log(err)
+    res.render('apothecary.ejs', {
+      herbs: result
+    })
+  })
+});
+
+// POSTING AN HERB FROM THE FORM INTO THE CABINET
+
+app.post('/post', (req, res) => {
+  db.collection('herbs').insertOne({name: req.body.ingredients, taste: req.body.taste, pairsWith: req.body.pair, medicinalBenefits: req.body.benefits, url: req.body.url})
+res.redirect("/apothecary")
+
+
+})
+
+
+
+// app.put('/saved', isLoggedIn, (req, res) => {
+   
+//     db.collection('herbs').findOneAndUpdate({
+//     _id: ObjectID(req.body.id)
+  
+//     }, {
+//       $set: {
+//         saved: true 
+//       }
+//     }, (err, result) => {
+//       if (err) return res.send(err)
+//       res.send(result)
+//     })
+//   })
+
+
+
+
+
   //I WANT TO BREW ===================================
   app.get('/brew', isLoggedIn, function (req, res) {
+    db.collection('herbs').find().toArray((err, herbs) => {
     db.collection('brews').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('brew.ejs', {
-        brews: result
+        brews: result,
+        herbs
       })
+    })
     })
   });
  
@@ -128,12 +187,16 @@ ObjectID = require('mongodb').ObjectID
   // })
 
 
+
+
+
+  
   // HEALING PROGRESS TRACKER ==============================
   app.get('/healingtracker', isLoggedIn, function (req, res) {
     db.collection('journey').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('healingtracker.ejs', {
-        
+        moods: result
       })
     })
   });
@@ -186,26 +249,6 @@ ObjectID = require('mongodb').ObjectID
 
 
 
- //APOTHECARY CABINET ============
-
-
- app.get('/apothecary', isLoggedIn, function (req, res) {
-  db.collection('herbs').find().toArray((err, result) => {
-    if (err) return console.log(err)
-    res.render('apothecary.ejs', {
-      herbs: result
-    })
-  })
-});
-
-// POSTING AN HERB FROM THE FROM INTO THE CABINET
-
-app.post('/post', (req, res) => {
-  db.collection('herbs').insertOne({name: req.body.addANewHerb, taste: req.body.taste, pairsWith: req.body.pairsWith, medicinalBenefits: req.body.medicinalBenefits})
-res.redirect("/apothecary")
-
-
-})
 
 
 

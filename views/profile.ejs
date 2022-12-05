@@ -25,7 +25,7 @@
    
   </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Brew Work</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,12 @@
     </div>
   </nav>
     
+<div class="titleGraphic">
+  <img src="https://i.ibb.co/6X4LPQD/brewworksignin.png" alt="brewworksignin">
+  <img src="https://i.ibb.co/N78d8LR/brewwork.png" alt="brewwork">
+ <img src="https://i.ibb.co/6X4LPQD/brewworksignin.png" alt="brewworksignin">
 
+</div>
     <!--User profile page - The Dashboard which shows: MONTHLY HEALING PROGRESS, TIMES I'VE BREWED, HERBS IN CABINET, BREW RECIPES SAVED, LENGTH OF HEALING JOURNEY
     
     <img src="https://i.ibb.co/j3qgKLg/brewworklogo.png" alt="brewworklogo" border="0">-->
@@ -64,20 +69,20 @@
         </div>
 
         <div class="box3">Herbs In My Cabinet:
-            <p class="brewNumber">13</p>
+            <p class="brewNumber"><%= herbs.length %></p>
         </div>
 
-        <div class="box4">Saved Recipes:
-            <p class="brewNumber">2</p>
+        <div class="box4">Times I've Brewed:
+            <p class="brewNumber"><%= brews.length %></p>
         </div>
 
         <div class="box5">Length Of Journey
             <p><%= totalDays %> Days</p>
         </div>
 
-        <div class="box6">Times I've Brewed:
+        <div class="box6">something
 
-            <p class="brewNumber">7</p>
+            <p class="brewNumber">things</p>
         </div>
 
         

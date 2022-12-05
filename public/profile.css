@@ -12,7 +12,26 @@ font-family: 'Megrim', cursive;
     background-repeat: no-repeat;
     background-size: 100%; */
 body {
-  background-color: #efe2ba;
+  background-color:#99080b;
+}
+
+.navbar {
+  background-color: #d79922;
+  margin-bottom: 2%;
+}
+
+.titleGraphic {
+  display: flex;
+
+  align-items: center;
+}
+.titleGraphic img {
+  height: 400px;
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
 }
   
 

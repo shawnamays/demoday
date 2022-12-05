@@ -15,6 +15,15 @@ body {
     background-color: #d79922;
 }
 
+.journalTitle {
+    font-family: 'Hubballi', cursive;
+}
+
+.journalEntryContainer {
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
 .healingTitle {
     font-size: 80px;
     font-family: 'Megrim', cursive;
