@@ -10,11 +10,20 @@ font-family: 'Megrim', cursive;
  width: 300px;
 }
 
+.navbar {
+    background-color:#99080b;
+    font-family: 'Hubballi', cursive;
+}
+
 body {
     font-family: 'Megrim', cursive;
     background-color: #d79922;
 }
 
+.entriesTitle {
+    font-size: 40px;
+    
+}
 .journalTitle {
     font-family: 'Hubballi', cursive;
 }
@@ -22,13 +31,22 @@ body {
 .journalEntryContainer {
     max-height: 70vh;
     overflow-y: scroll;
+    background-color:#99080b;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color:bisque;
 }
 
 .healingTitle {
     font-size: 80px;
     font-family: 'Megrim', cursive;
-    margin-left: 15%;
-    margin-bottom: 10%;
-    margin-top: 5%;
+   
+    margin-bottom: 3%;
+    margin-top: 2%;
 
+}
+
+.btn-success {
+    background-color:#99080b;
 }

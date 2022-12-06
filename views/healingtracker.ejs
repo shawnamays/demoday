@@ -50,7 +50,7 @@ POST mood/feeling rating scale 1-10
 POST checkbox next to "used remedy" | "did not use rememdy"
 POST counter with number of times recipes have been made
 POST counter with number of herbs in cabinet currently.  -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Brew Work</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -71,12 +71,13 @@ POST counter with number of herbs in cabinet currently.  -->
 
 
 
-    <h1 class="healingTitle">Healing Journey Progress</h1>
+    <h1 class="healingTitle">My Healing Journal</h1>
     <div class="container">
         <div class="row">
 
 
             <div class="col-sm journalEntryContainer">
+                <h2 class="entriesTitle">Entries</h2>
                 <!---THIS IS THE LEFT SIDE COLUMN OF THE PAGE WHERE THE JOURNAL ENTRY SNIPPETS ARE DISPLAYED-->
                 <% for (let i=0; i < moods.length; i++) { %>
                     <p>

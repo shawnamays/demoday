@@ -9,10 +9,14 @@ font-family: 'Megrim', cursive;
 
 */
 
+.navbar {
+  background-color:#99080b;
+  font-family: 'Hubballi', cursive;
+
+}
 body {
   background-color: #d79922;
-  padding-left: 2%;
-  padding-right: 2%;
+
   
 }
 
