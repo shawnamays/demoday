@@ -15,6 +15,9 @@ document.querySelector(".addButton").addEventListener("click",() =>{
         body: JSON.stringify({
             url, ingredients, taste, pair, benefits
         })
-    }).then(res => res.json()).then(data => window.location.reload())
+    }).then(res => res.json()).then(data => {
+        console.log("fetch done",new Date())
+        window.location.reload()})
+
     })
 })
