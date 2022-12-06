@@ -108,7 +108,20 @@ res.redirect("/apothecary")
 
 })
 
+// DELETING AN HERB FROM THE CABINET
 
+app.delete('/delete', isLoggedIn, (req, res) => {
+  db.collection('herbs').findOneAndDelete({
+    email: req.body.email
+  }, {
+    $pull: {
+      cabinet: req.body.herb
+    }
+  }, (err, result) => {
+    if (err) return res.send(500, err)
+    res.send('Message deleted!')
+  })
+})
 
 // app.put('/saved', isLoggedIn, (req, res) => {
    

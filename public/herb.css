@@ -25,6 +25,13 @@ body {
   background-color: #d79922
 }
 
+.brewingHeader {
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card {
   background-color: #EFE2BA
 }
@@ -32,6 +39,9 @@ body {
 .titleFonts {
 font-size: 80px;
 font-family: 'Megrim', cursive;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -64,6 +74,7 @@ margin-left: 5%;
 }
 .container {
   font-family: 'Megrim', cursive;
+  margin-left: 6%;
  
 
 }
@@ -81,6 +92,7 @@ font-size: 35px;
   margin-left: 35%;
   margin-top: 5%;
   margin-bottom: 5%;
+  
 
 }
 

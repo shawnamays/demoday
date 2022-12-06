@@ -57,7 +57,7 @@ Users can open the cabinet and see their herbs displayed.  When they CLICK on th
   </div>
 </div>
 
-<h1 class="forageTitle">Fancy A Journey? Then Forage A New Remedy!</h1>
+<h1 class="forageTitle">Fancy Taking A Journey? Then Forage A New Remedy!</h1>
  
 <div class="foragingBox">
   <button data-tf-popup="XmyCyzN2" data-tf-size="100" data-tf-iframe-props="title=Interactive Fiction (copy)" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#614E38;color:#FFFFFF;font-size:31px;border-radius:38px;padding:0 51px;font-weight:bold;height:77.5px;cursor:pointer;line-height:77.5px;text-align:center;margin:0;text-decoration:none;">Forage A New Remedy!</button><script src="//embed.typeform.com/next/embed.js"></script>
@@ -65,16 +65,16 @@ Users can open the cabinet and see their herbs displayed.  When they CLICK on th
 
 
   <!-- <form action="/post" method="POST"> -->
-<h2 class="herbDiscoveryTitle">What new herb did you discover today?</h2>
+<h2 class="herbDiscoveryTitle">What ingredient did you discover today?</h2>
 <!---THIS NEEDS TO BE A POST REQUEST THAT SENDS THE RESULT TO WHERE THE
 HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
 
 
 <div class="theInputs">
-    <input type="text" placeholder="name of ingredient" name="addANewHerb" class="ingredientName">
-    <input type="text" placeholder="tastes like" name="taste" class="taste">
-    <input type="text" placeholder="pairs well with" name="pairsWith" class="pair">
-    <input type="text" placeholder="medicinal benefits" name="medicinalBenefits" class="benefits">
+    <p>Herb/Root Name: </p><input type="text" placeholder="name of ingredient" name="addANewHerb" class="ingredientName">
+    <p>Tastes Like?: </p><input type="text" placeholder="tastes like" name="taste" class="taste">
+    <p>Pairs Well With These Herbs/Roots: </p><input type="text" placeholder="pairs well with" name="pairsWith" class="pair">
+    <p>Medicinal Benefits: </p><input type="text" placeholder="medicinal benefits" name="medicinalBenefits" class="benefits">
     <button class="addButton">Add To My Cabinet!</button>
   </div>
   <!-- </form> -->
@@ -84,6 +84,7 @@ HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
 
 
 <div class="headTitle"><h1>Current Inventory</h1></div>
+
 <div class="container">    
   <div class="row">
 
@@ -107,8 +108,9 @@ HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>    
+            <button type="submit" method="DELETE">Remove From My Cabinet</button>
         </p>
         </div>
       </div>
@@ -116,6 +118,7 @@ HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
     </div>
     <% } ) %>
     <% } %>
+  </div>
   </div>
 
   
