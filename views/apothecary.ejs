@@ -1,130 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Apothecary</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="herb.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--THIS IS THE FONT COLLECTION-->
 
 
-  <style> @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap'); </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Liu+Jian+Mao+Cao&family=Zilla+Slab+Highlight&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-  <style> @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Liu+Jian+Mao+Cao&family=Zilla+Slab+Highlight&display=swap'); </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hubballi&family=Liu+Jian+Mao+Cao&family=Zilla+Slab+Highlight&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Liu+Jian+Mao+Cao&family=Zilla+Slab+Highlight&display=swap');
+  </style>
 
   <!--END!!!!!!-->
 
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
- 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
 </head>
+
 <body>
 
-    <!-- ===== Foraging/Herb Discovery (with randomizer for herbs in the database) - A page with a survey to find a new herb that suits their needs.  Other side of the page will be a randomizer if user does not want to "go foraging".  Below this will be the CABINET WHERE THE HERBS ARE STORED AND APPEAR ONCE THEY ARE CHOSEN FROM THE FORAGING SURVEY/RANDOMIZER OPTION.
+  <!-- ===== Foraging/Herb Discovery (with randomizer for herbs in the database) - A page with a survey to find a new herb that suits their needs.  Other side of the page will be a randomizer if user does not want to "go foraging".  Below this will be the CABINET WHERE THE HERBS ARE STORED AND APPEAR ONCE THEY ARE CHOSEN FROM THE FORAGING SURVEY/RANDOMIZER OPTION.
 
 ///// Apothecary cabinet (multiple parts) (added to bottom of ^^ foraging page) -
 Users can open the cabinet and see their herbs displayed.  When they CLICK on the herb, the corresponding recipes you have created from that herb category will show up that you've already stored (i.e: you click on "lavender" and are shown "lavender rose tea", "lavender honey", "lavender aromatherapy smudge stick"). -->
 
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Brew Work</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/profile">Home</a>
-        <a class="nav-link" href="/apothecary">Apothecary</a>
-        <a class="nav-link" href="/brew">I want to brew</a>
-        <a class="nav-link" href="/healingtracker">Healing Journey</a>
-        <a class="nav-link" href="/logout">Logout</a>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Brew Work</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/profile">Home</a>
+          <a class="nav-link" href="/apothecary">Apothecary</a>
+          <a class="nav-link" href="/brew">I want to brew</a>
+          <a class="nav-link" href="/healingtracker">Healing Journey</a>
+          <a class="nav-link" href="/logout">Logout</a>
+        </div>
       </div>
     </div>
+  </nav>
+
+  <div class="jumbotron">
+
+      <h1 class="titleFonts">My Apothecary Cabinet</h1>
+      <img class="brewingHeader" src="https://i.ibb.co/FJpm992/Brown-Simple-Ethnic-Tribal-Logo.png">
+
+    
   </div>
-</nav>
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1 class="titleFonts">My Apothecary Cabinet</h1>   
-    <img class="brewingHeader" src="https://i.ibb.co/FJpm992/Brown-Simple-Ethnic-Tribal-Logo.png">   
-   
-  </div>
-</div>
+  <h1 class="forageTitle">Fancy Taking A Journey? Then Forage A New Remedy!</h1>
 
-<h1 class="forageTitle">Fancy Taking A Journey? Then Forage A New Remedy!</h1>
- 
-<div class="foragingBox">
-  <button data-tf-popup="XmyCyzN2" data-tf-size="100" data-tf-iframe-props="title=Interactive Fiction (copy)" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#614E38;color:#FFFFFF;font-size:31px;border-radius:38px;padding:0 51px;font-weight:bold;height:77.5px;cursor:pointer;line-height:77.5px;text-align:center;margin:0;text-decoration:none;">Forage A New Remedy!</button><script src="//embed.typeform.com/next/embed.js"></script>
+  <div class="foragingBox">
+    <button data-tf-popup="XmyCyzN2" data-tf-size="100" data-tf-iframe-props="title=Interactive Fiction (copy)"
+      style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#614E38;color:#FFFFFF;font-size:31px;border-radius:38px;padding:0 51px;font-weight:bold;height:77.5px;cursor:pointer;line-height:77.5px;text-align:center;margin:0;text-decoration:none;">Forage
+      A New Remedy!</button>
+    <script src="//embed.typeform.com/next/embed.js"></script>
 
 
 
-  <!-- <form action="/post" method="POST"> -->
-<h2 class="herbDiscoveryTitle">What ingredient did you discover today?</h2>
-<!---THIS NEEDS TO BE A POST REQUEST THAT SENDS THE RESULT TO WHERE THE
+    
+    <h2 class="herbDiscoveryTitle">What ingredient did you discover today?</h2>
+    <!---THIS NEEDS TO BE A POST REQUEST THAT SENDS THE RESULT TO WHERE THE
 HERBS POPULATE THAT ARE STORED IN THE DATABASE-->
 
-
-<div class="theInputs">
-    <p>Herb/Root Name: </p><input type="text" placeholder="name of ingredient" name="addANewHerb" class="ingredientName">
-    <p>Tastes Like?: </p><input type="text" placeholder="tastes like" name="taste" class="taste">
-    <p>Pairs Well With These Herbs/Roots: </p><input type="text" placeholder="pairs well with" name="pairsWith" class="pair">
-    <p>Medicinal Benefits: </p><input type="text" placeholder="medicinal benefits" name="medicinalBenefits" class="benefits">
-    <button class="addButton">Add To My Cabinet!</button>
-  </div>
-  <!-- </form> -->
-</div>
-</div>
-
-
-
-<div class="headTitle"><h1>Current Inventory</h1></div>
-
-<div class="container">    
-  <div class="row">
-
-    <% if (herbs) { %>
-      <% herbs.forEach(data=> { %>
-
-    <div class="col-sm-4">
-      
-        
-      <div class="card" style="width: 18rem;">
-        <div class="card-header text-center theFont">
-          <%= data.name %>
-        </div>
-        <img src="<%= data.url %>" class="card-img-top p-2" alt="...">
-        <div class="card-body">
-          <p class="card-text">
-            <p class="card-text">Tastes Like: <%= data.taste %></p>    
-            <p class="card-text">Pairs Well With: <%= data.pairsWith %></p>
-            <p class="card-text">Health Benefits: <%= data.medicinalBenefits %></p>
-           
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>    
-            <button type="submit" id="<%= data._id %>" method="DELETE">Remove From My Cabinet</button>
-        </p>
-        </div>
-      </div>
-     
+    <div class="theInputs">
+      <input type="text" placeholder="name of ingredient" name="addANewHerb"
+        class="ingredientName">
+      <input type="text" placeholder="tastes like" name="taste" class="taste">
+      <input type="text" placeholder="pairs well with" name="pairsWith" class="pair">
+      <input type="text" placeholder="medicinal benefits" name="medicinalBenefits"
+        class="benefits">
+      <button class="addButton">Add To My Cabinet!</button>
     </div>
-    <% } ) %>
-    <% } %>
+
   </div>
   </div>
 
-  
-  
 
 
-<script src="apothecary.js"></script>
+  <div class="headTitle">
+    <h1 class="inventory">Current Inventory</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <% if (herbs) { %>
+        <% herbs.forEach(data=> { %>
+
+          <div class="col-sm-4">
+
+
+            <div class="card" style="width: 18rem;">
+              <div class="card-header text-center theFont">
+                <%= data.name %>
+              </div>
+              <img src="<%= data.url %>" class="card-img-top p-2" alt="...">
+              <div class="card-body">
+                <p class="card-text">
+                <p class="card-text">Tastes Like: <%= data.taste %>
+                </p>
+                <p class="card-text">Pairs Well With: <%= data.pairsWith %>
+                </p>
+                <p class="card-text">Health Benefits: <%= data.medicinalBenefits %>
+                </p>
+
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <button type="submit" id="<%= data._id %>" method="DELETE">Remove From My Cabinet</button>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <% } ) %>
+            <% } %>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="apothecary.js"></script>
 </body>
+
 </html>

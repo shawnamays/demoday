@@ -9,10 +9,7 @@ font-family: 'Zilla Slab Highlight', cursive;
 •/
 
 /* Add a gray background color and some padding to the footer */
-footer {
-  background-color: #f2f2f2;
-  padding: 25px;
-}
+
 
 .theFont {
   font-family: 'Liu Jian Mao Cao', cursive;
@@ -21,9 +18,27 @@ font-size: 30px;
  
 }
 
-body {
-  background-color: #d79922
+.navbar {
+  background-color:#99080b;
 }
+
+.card-text {
+  font-family: 'Hubballi', cursive;
+ 
+}
+
+body {
+  background-color: #d79922;
+  font-family: 'Hubballi', cursive;
+  
+}
+
+.jumbotron {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .brewingHeader {
   width: 300px;
@@ -37,11 +52,10 @@ body {
 }
 
 .titleFonts {
-font-size: 80px;
+font-size: 70px;
 font-family: 'Megrim', cursive;
-display: block;
-  margin-left: auto;
-  margin-right: auto;
+margin-left: 35%;
+
 
 }
 
@@ -58,13 +72,23 @@ display: block;
 }
 
 .addButton {
-margin-left: 5%;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
+
 .theInputs {
-  padding-left: 20%;
-  padding-right: 20%;
-  margin-left: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
+  }
+
+.theInputs span {
+display: block;
+margin-left: auto;
+margin-right: auto;
   
 }
 
@@ -84,6 +108,9 @@ font-family: 'Liu Jian Mao Cao', cursive;
 color: #195128;
 margin-bottom: 5%;
 font-size: 35px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -91,7 +118,7 @@ font-size: 35px;
   font-family: 'Megrim', cursive;
   margin-left: 35%;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   
 
 }
