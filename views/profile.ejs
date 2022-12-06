@@ -44,9 +44,7 @@
   </nav>
     
 <div class="titleGraphic">
-  <img src="https://i.ibb.co/6X4LPQD/brewworksignin.png" alt="brewworksignin">
-  <img src="https://i.ibb.co/N78d8LR/brewwork.png" alt="brewwork">
- <img src="https://i.ibb.co/6X4LPQD/brewworksignin.png" alt="brewworksignin">
+  
 
 </div>
     <!--User profile page - The Dashboard which shows: MONTHLY HEALING PROGRESS, TIMES I'VE BREWED, HERBS IN CABINET, BREW RECIPES SAVED, LENGTH OF HEALING JOURNEY
@@ -59,30 +57,30 @@
         
         
         
-        <div class="box1">Monthly Healing Progress
-            <progress value="30" max="100" class="healingBar">30%</progress>
+        <div class="box1">Herbs In My Cabinet:
+          <p class="brewNumber"><%= herbs.length %></p>
         </div>
 
         <div class="box2">
-      
+          <img src="https://i.ibb.co/N78d8LR/brewwork.png" alt="brewwork">
+         
+        </div>
+
+        <div class="box3">
+          Times I've Brewed:
+          <p class="brewNumber"><%= brews.length %></p>
+        </div>
+
+        <div class="box4">
           
         </div>
 
-        <div class="box3">Herbs In My Cabinet:
-            <p class="brewNumber"><%= herbs.length %></p>
+        <div class="box5">
+          <p class="dashTitles">Length of my Healing Journey</p>
+          <p><%= totalDays %> Days</p>
         </div>
 
-        <div class="box4">Times I've Brewed:
-            <p class="brewNumber"><%= brews.length %></p>
-        </div>
-
-        <div class="box5">Length Of Journey
-            <p><%= totalDays %> Days</p>
-        </div>
-
-        <div class="box6">something
-
-            <p class="brewNumber">things</p>
+        <div class="box6">
         </div>
 
         

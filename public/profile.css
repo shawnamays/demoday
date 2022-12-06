@@ -61,12 +61,7 @@ width: 50%;
     font-family: 'Megrim', cursive;
   }
 
-  .healingBar{
-    width: 60%;
-    height: 50px;
-    margin-left: 20%;
-    margin-top: 20%;
-  }
+
 
 
  /*THE CENTRAL LOGO BLOCK*/
@@ -93,10 +88,9 @@ width: 50%;
   }
 
   /* NUMBER OF SAVED RECIPES IN CABINET (A NUMBER) */
-  .box4 {
-    text-align: center;
-    font-size: 30px;    
-    font-family: 'Megrim', cursive;
+  .box2 img {
+width: 300px;
+    
   }
 
   /* DAYS OF JOURNEY (A NUMBER OR CALENDAR) */
