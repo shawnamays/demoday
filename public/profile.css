@@ -17,7 +17,7 @@ body {
 
 .navbar {
   background-color: #d79922;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   font-family: 'Hubballi', cursive;
 }
 
@@ -35,11 +35,19 @@ body {
   margin-bottom: 2%;
 }
   
+.dashTitles {
+  margin-top: 10%;
+}
 
+.journeyDays {
+
+  font-family: 'Hubballi', cursive;
+  
+}
 .container {
  
     display: grid; 
-    grid-template-columns: 2fr 2fr 2fr; 
+    grid-template-columns: 3fr 2fr 3fr; 
     grid-template-rows: 1fr 1fr; 
     gap: 10px 10px; 
     grid-template-areas: 
@@ -50,7 +58,8 @@ body {
     background-color: #d79922;
       border-radius: 2%;
       
-width: 50%;
+width: 80%;
+padding: 1%;
 
   }
 
@@ -60,6 +69,7 @@ width: 50%;
     font-size: 30px;
     text-align: center;
     font-family: 'Megrim', cursive;
+    margin-top: 20%;
   }
 
 
@@ -86,11 +96,13 @@ width: 50%;
     text-align: center;
     font-size: 30px;
     font-family: 'Megrim', cursive;
+    margin-top: 20%;
   }
 
   /* NUMBER OF SAVED RECIPES IN CABINET (A NUMBER) */
   .box2 img {
 width: 300px;
+margin-top: 10%;
     
   }
 
