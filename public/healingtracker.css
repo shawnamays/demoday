@@ -42,12 +42,17 @@ body {
 .healingTitle {
     font-size: 80px;
     font-family: 'Megrim', cursive;
-   
-    margin-bottom: 3%;
-    margin-top: 2%;
+ 
 
 }
 
+.healingTitleContainer {
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
 
 
 .btn-success {
