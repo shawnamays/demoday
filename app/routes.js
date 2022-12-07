@@ -82,15 +82,15 @@ module.exports = function (app, passport, db) {
 
   // DELETING AN HERB FROM THE CABINET
 
-  app.delete('/delete', isLoggedIn, (req, res) => {
-    console.log("deleting herb")
+  app.delete('/deleteHerbs', isLoggedIn, (req, res) => {
+    console.log("delete herb", req.body)
     db.collection('herbs').findOneAndDelete({
       userid: req.user._id,
       _id: ObjectID(req.body.herbid)
 
     }, (err, result) => {
       if (err) return res.send(500, err)
-      res.send('Message deleted!')
+      res.send('recipe deleted!')
     })
   })
 
@@ -129,16 +129,8 @@ module.exports = function (app, passport, db) {
   })
 
   //DELETE A REMEDY FROM BREW PAGE
-  app.delete('/deleteHerbs', isLoggedIn, (req, res) => {
-    db.collection('brews').findOneAndDelete({
-      userid: req.user._id,
-      _id: ObjectID(req.body.brewid)
 
-    }, (err, result) => {
-      if (err) return res.send(500, err)
-      res.send('recipe deleted!')
-    })
-  })
+ 
 
   app.delete('/deleteBrews', isLoggedIn, (req, res) => {
     console.log('deleting brew')
