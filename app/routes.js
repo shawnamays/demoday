@@ -83,6 +83,7 @@ module.exports = function (app, passport, db) {
   // DELETING AN HERB FROM THE CABINET
 
   app.delete('/delete', isLoggedIn, (req, res) => {
+    console.log("deleting herb")
     db.collection('herbs').findOneAndDelete({
       userid: req.user._id,
       _id: ObjectID(req.body.herbid)
@@ -115,15 +116,20 @@ module.exports = function (app, passport, db) {
   //FORM POST TO REMEDIES SIDEBAR ON THE RIGHT ===========
 
   app.post('/newRemedies', (req, res) => {
+    let herbSelection = req.body.herbSelection
+    if (typeof herbSelection === "string" ) {
+
+      herbSelection = [herbSelection]
+    }
     db.collection('brews').insertOne(
-      { userid: req.user._id, name: req.body.brewName, base: req.body.base, herbSelection: req.body.herbSelection, instructions: req.body.instructions }
+      { userid: req.user._id, name: req.body.brewName, base: req.body.base, herbSelection: herbSelection, instructions: req.body.instructions }
     )
     res.redirect("/brew")
 
   })
 
   //DELETE A REMEDY FROM BREW PAGE
-  app.delete('/delete', isLoggedIn, (req, res) => {
+  app.delete('/deleteHerbs', isLoggedIn, (req, res) => {
     db.collection('brews').findOneAndDelete({
       userid: req.user._id,
       _id: ObjectID(req.body.brewid)
@@ -134,7 +140,21 @@ module.exports = function (app, passport, db) {
     })
   })
 
+  app.delete('/deleteBrews', isLoggedIn, (req, res) => {
+    console.log('deleting brew')
+    console.log(`User id=${req.user._id},brewName=${req.body.brewName}`)
+console.log("brew herb selection=", req.body.brewHerbSelection)
+    db.collection('brews').findOneAndDelete({
+      userid: req.user._id,
+      name: req.body.brewName,
+      herbSelection: req.body.brewHerbSelection
 
+    }, (err, result) => {
+      if (err) return res.send(500, err)
+      console.log(result)
+      res.send('recipe deleted!')
+    })
+  })
 
 
 

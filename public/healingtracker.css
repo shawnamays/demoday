@@ -16,12 +16,13 @@ font-family: 'Megrim', cursive;
 }
 
 body {
-    font-family: 'Megrim', cursive;
+    font-family: 'Hubballi', cursive;
     background-color: #d79922;
 }
 
 .entriesTitle {
     font-size: 40px;
+   
     
 }
 .journalTitle {
@@ -46,6 +47,8 @@ body {
     margin-top: 2%;
 
 }
+
+
 
 .btn-success {
     background-color:#99080b;

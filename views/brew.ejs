@@ -166,7 +166,7 @@
               </p>
               <small><p>Base:<%= data.base %></p></small>
               <br>
-              <button type="submit" method="DELETE">Delete This Remedy</button>
+              <button type="submit" class="deleteBtn" data-brew-name="<%= data.name %>" data-brew-herb-selection="<%= data.herbSelection %>">Delete This Remedy</button>
             </a>
 
          
@@ -185,7 +185,7 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  
+  <script src="brew.js"></script>
 </body>
 
 </html>
