@@ -23,7 +23,7 @@ document.querySelector(".addButton").addEventListener("click", () => {
     })
 })
 
-//this is going to target the button to delete the herb
+//this is going to target the button to delete the herb in the database
 
 document.querySelectorAll(".deleteBtn").forEach(button => {
 
